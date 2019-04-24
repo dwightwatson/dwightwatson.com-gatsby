@@ -49,7 +49,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#4299e1`,
-        display: `minimal-ui`
+        display: `minimal-ui`,
         icon: `src/images/tsunami.png`,
       },
     },
