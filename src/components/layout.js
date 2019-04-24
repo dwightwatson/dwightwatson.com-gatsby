@@ -11,13 +11,13 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath) {
       header = (
-        <h1>
+        <h1 className="text-2xl">
           <Link to={`/`}>{title}</Link>
         </h1>
       )
     } else {
       header = (
-        <h3>
+        <h3 className="text-xl">
           <Link to={`/`}>{title}</Link>
         </h3>
       )
@@ -25,8 +25,8 @@ class Layout extends React.Component {
 
     return (
       <div className="font-sans border-t-2 border-orange-500">
-        <div className="container mx-auto">
-          <header>{header}</header>
+        <div className="max-w-lg px-4">
+          <header className="py-4">{header}</header>
           <main>{children}</main>
         </div>
       </div>

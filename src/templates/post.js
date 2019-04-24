@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
+import Tag from "../components/tag"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -17,25 +18,30 @@ class PostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <h1>{post.frontmatter.title}</h1>
-        <p>
-          {post.frontmatter.date}
-        </p>
+
+        <div className="flex justify-between items-center">
+          <h1 className="text-xl">{post.frontmatter.title}</h1>
+        <small>{post.frontmatter.date}</small>
+        </div>
+
+        {post.frontmatter.tags.map(tag => <Tag key={tag} tag={tag} />)}
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
+
+
         <hr/>
         <Bio />
 
         <ul>
           <li>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
+              <Link to={previous.fields.slug} rel="prev" className="underline">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
+              <Link to={next.fields.slug} rel="next" className="underline">
                 {next.frontmatter.title} →
               </Link>
             )}
@@ -62,6 +68,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        tags
         date(formatString: "MMMM DD, YYYY")
       }
     }

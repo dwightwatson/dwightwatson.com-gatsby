@@ -1,10 +1,3 @@
-/**
- * Bio component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 
@@ -14,17 +7,11 @@ function Bio() {
       query={bioQuery}
       render={data => {
         const { author, social } = data.site.siteMetadata
+
         return (
-          <div>
-            <p>
-              Written by <strong>{author}</strong> who lives and works in San
-              Francisco building useful things.
-              {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
-                You should follow him on Twitter
-              </a>
-            </p>
-          </div>
+          <p className="border border-orange-500 p-4 mb-5">
+            A blog about Laravel & Rails, written by <a href={`https://twitter.com/${social.twitter}`} className="underline">{author}</a>.
+          </p>
         )
       }}
     />
