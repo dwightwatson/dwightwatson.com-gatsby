@@ -19,14 +19,16 @@ class PostTemplate extends React.Component {
           description={post.frontmatter.description || post.excerpt}
         />
 
-        <div className="flex justify-between items-center">
-          <h1 className="text-xl">{post.frontmatter.title}</h1>
-        <small>{post.frontmatter.date}</small>
+        <div className="mb-4">
+          <h1 className="text-2xl">{post.frontmatter.title}</h1>
+          <small>{post.frontmatter.date}</small>
         </div>
 
-        {post.frontmatter.tags && post.frontmatter.tags.map(tag => <Tag key={tag} tag={tag} />)}
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div className="mb-8">
+          {post.frontmatter.tags && post.frontmatter.tags.map(tag => <Tag key={tag} tag={tag} />)}
+        </div>
 
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
         <hr/>
         <Bio />

@@ -15,7 +15,7 @@ export default ({ node }) => {
       </div>
       <p
         dangerouslySetInnerHTML={{
-          __html: node.frontmatter.description || node.excerpt,
+          __html: node.excerpt,
         }}
       />
     </div>

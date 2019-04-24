@@ -9,7 +9,7 @@ function Bio() {
         const { author, social } = data.site.siteMetadata
 
         return (
-          <p className="border border-orange-500 p-4 mb-5">
+          <p className="border-2 border-blue-500 p-4 mb-5">
             A blog about Laravel & Rails, written by <a href={`https://twitter.com/${social.twitter}`} className="underline">{author}</a>.
           </p>
         )

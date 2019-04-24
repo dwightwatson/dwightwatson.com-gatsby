@@ -19,7 +19,7 @@ class Index extends React.Component {
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         <Bio />
-        {posts.map(({ node }) => <Post key={node.fields.slug} node={node}/>)}
+        {posts.map(({ node }) => <Post key={node.fields.slug} node={node} />)}
       </Layout>
     )
   }
