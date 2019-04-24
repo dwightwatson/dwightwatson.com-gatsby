@@ -2,7 +2,7 @@
 title: Switching from CodeIgniter to Laravel
 path: /posts/switching-from-codeigniter-to-laravel
 author: Dwight Watson
-date: 2013-07-18
+date: 2013-07-26
 ---
 
 I've learnt a lot over the past year or so after spreading my wings from CodeIgniter. After toying with Ruby on Rails for a bit on a few projects and coming back to PHP I realised much of what we were missing over on this side. I began applying some of the patterns I had learnt to my new projects in an effort to improve them. When I discovered Laravel though, I was extremely excited to find much of what I loved about Rails to be available right here on PHP. Having used Laravel for a while now, I've learnt how to apply everything I did in CodeIgniter in new and better ways, which has made me a better and faster developer.

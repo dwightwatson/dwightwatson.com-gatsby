@@ -20,7 +20,7 @@ const Tags = (props) => {
       />
 
       <div className="mb-4">
-        <h1 className="text-2xl">{tag}</h1>
+        <h1 className="text-2xl">#{tag}</h1>
         <small>{tagHeader}</small>
       </div>
 
