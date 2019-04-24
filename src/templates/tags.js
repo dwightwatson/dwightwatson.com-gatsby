@@ -1,21 +1,29 @@
 import React from "react"
+import { graphql } from "gatsby"
 
+import SEO from "../components/seo"
 import Layout from "../components/layout"
 import Post from "../components/post"
-import { Link, graphql } from "gatsby"
 
 const Tags = (props) => {
   const { pageContext, data } = props;
   const { tag } = pageContext
   const siteTitle = props.data.site.siteMetadata.title
   const { edges, totalCount } = data.allMarkdownRemark
-  const tagHeader = `${totalCount} post${
-    totalCount === 1 ? "" : "s"
-  } tagged with "${tag}"`
+  const tagHeader = `${totalCount} post${totalCount === 1 ? "" : "s"}`
 
   return (
     <Layout location={props.location} title={siteTitle}>
-      <h1>{tagHeader}</h1>
+      <SEO
+        title={tag}
+        description={`Posts related to ${tagHeader}`}
+      />
+
+      <div className="mb-4">
+        <h1 className="text-2xl">{tag}</h1>
+        <small>{tagHeader}</small>
+      </div>
+
       <ul>
         {edges.map(({ node }) => <Post key={node.fields.slug} node={node}/>)}
       </ul>
