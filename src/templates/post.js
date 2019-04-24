@@ -24,7 +24,7 @@ class PostTemplate extends React.Component {
         <small>{post.frontmatter.date}</small>
         </div>
 
-        {post.frontmatter.tags.map(tag => <Tag key={tag} tag={tag} />)}
+        {post.frontmatter.tags && post.frontmatter.tags.map(tag => <Tag key={tag} tag={tag} />)}
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
 
