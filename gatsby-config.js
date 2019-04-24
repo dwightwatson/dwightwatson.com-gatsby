@@ -1,26 +1,28 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `Neon Tsunami`,
+    author: `Dwight Watson`,
+    description: `A blog on Laravel & Rails.`,
+    siteUrl: `https://www.neontsunami.com`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `DwightConrad`,
     },
   },
   plugins: [
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-purgecss`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-plugin-purgecss`,
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
-      },
+        tailwind: true,
+        ignore: ['prismjs']
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/assets`,
-        name: `assets`,
+        name: `markdown`,
+        path: `${__dirname}/src/markdown`,
       },
     },
     {
@@ -57,22 +59,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Neon Tsunami`,
+        short_name: `Neon Tsunami`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        display: `minimal-ui`
       },
     },
     `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
+    `gatsby-plugin-react-helmet`
   ],
 }
