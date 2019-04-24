@@ -10,7 +10,6 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-postcss`,
-    `gatsby-plugin-purgecss`,
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {
