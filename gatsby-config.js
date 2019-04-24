@@ -37,7 +37,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: 'UA-23727271-4',
       },
     },
     `gatsby-plugin-feed`,
@@ -48,8 +48,9 @@ module.exports = {
         short_name: `Neon Tsunami`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#4299e1`,
         display: `minimal-ui`
+        icon: `src/images/tsunami.png`,
       },
     },
     `gatsby-plugin-offline`,
