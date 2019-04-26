@@ -1,5 +1,5 @@
 ---
-title: ""Too many connections" using PHPUnit for testing Laravel 4 on CircleCI"
+title: "\"Too many connections\" using PHPUnit for testing Laravel 4 on CircleCI"
 path: /posts/too-many-connections-using-phpunit-for-testing-laravel-4-on-circleci
 author: Dwight Watson
 date: 2014-05-06
