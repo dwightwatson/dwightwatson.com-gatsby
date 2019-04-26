@@ -53,7 +53,7 @@ module.exports = {
         icon: `src/images/tsunami.png`,
       },
     },
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify`,
   ],

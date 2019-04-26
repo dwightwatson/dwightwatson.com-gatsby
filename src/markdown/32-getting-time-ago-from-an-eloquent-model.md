@@ -1,5 +1,5 @@
 ---
-title: "Getting "time ago" from an Eloquent model"
+title: "Getting \"time ago\" from an Eloquent model"
 path: /posts/getting-time-ago-from-an-eloquent-model
 author: Dwight Watson
 date: 2013-11-28
