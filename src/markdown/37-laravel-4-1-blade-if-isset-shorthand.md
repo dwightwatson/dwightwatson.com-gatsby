@@ -1,5 +1,5 @@
 ---
-title: "Laravel 4.1 Blade "if isset" shorthand"
+title: "Laravel 4.1 Blade \"if isset\" shorthand"
 path: /posts/laravel-4-1-blade-if-isset-shorthand
 author: Dwight Watson
 date: 2013-12-16
