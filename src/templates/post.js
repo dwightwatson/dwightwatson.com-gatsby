@@ -33,15 +33,15 @@ class PostTemplate extends React.Component {
         <hr/>
         <Bio />
 
-        <ul>
-          <li>
+        <ul class="mb-5">
+          <li class="mb-5">
             {previous && (
               <Link to={previous.fields.slug} rel="prev" className="underline">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
-          <li>
+          <li class="text-right">
             {next && (
               <Link to={next.fields.slug} rel="next" className="underline">
                 {next.frontmatter.title} →
