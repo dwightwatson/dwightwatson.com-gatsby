@@ -13,12 +13,12 @@ To fix this up, simply adjust the `boot()` method in your service provider, prov
 ```php
 /**
  * Boot the service provider.
- * 
+ *
  * @return void
  */
 public function boot()
 {
-	$this-&gt;package(&#039;watson/bootstrap-form&#039;, null, __DIR__);
+	$this->package('watson/bootstrap-form', null, __DIR__);
 }
 ```
 

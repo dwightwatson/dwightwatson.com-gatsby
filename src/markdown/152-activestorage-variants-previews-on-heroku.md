@@ -1,5 +1,5 @@
 ---
-title: "ActiveStorage variants &amp; previews on Heroku"
+title: "ActiveStorage variants & previews on Heroku"
 path: /posts/activestorage-variants-previews-on-heroku
 author: Dwight Watson
 date: 2018-01-02
@@ -22,4 +22,4 @@ mupdf
 
 Finally, you’ll need to add a new build pack provided by Heroku - [`heroku-buildpack-apt`](https://github.com/heroku/heroku-buildpack-apt) You can choose to add it in Heroku’s dashboard or your `app.json` file if you prefer. It’s important to note that this is a first-party build pack so it’s officially supported and likely to be maintained. The buildpack works by installing additional dependencies from `apt` and also ensuring they’re cached between deployments so you aren’t re-installing from scratch each time.
 
-Edit: updated post to add the `Aptfile` before the buildpack, as the buildpack will say it&#039;s not compatible with your app unless the `Aptfile` is present.
+Edit: updated post to add the `Aptfile` before the buildpack, as the buildpack will say it's not compatible with your app unless the `Aptfile` is present.

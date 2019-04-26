@@ -6,10 +6,10 @@ date: 2016-07-15
 tags: ["laravel"]
 ---
 
-Dropping in Laravel 5.3 is an easy way to compare if two model instances you&#039;ve got represent the same record in your database. The new `is()` method checks to see if the model keys, table and connection names match up.
+Dropping in Laravel 5.3 is an easy way to compare if two model instances you've got represent the same record in your database. The new `is()` method checks to see if the model keys, table and connection names match up.
 
 ```php
-if (auth()-&gt;user()-&gt;is($post-&gt;author)) {
+if (auth()->user()->is($post->author)) {
     // The currently authenicated user is the author of the post.
 }
 ```

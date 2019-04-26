@@ -6,9 +6,9 @@ date: 2013-12-22
 tags: ["laravel", "php"]
 ---
 
-*EDIT: I&#039;ve since written an updated post on this topic, [which you can read here](http://www.neontsunami.com/post/model-validation-in-laravel-using-traits). I decribe a new package that I&#039;ve written for Laravel 4.2+ called [watson/validating](https://github.com/dwightwatson/validating) which is a more customizable and flexible model validation trait.*
+*EDIT: I've since written an updated post on this topic, [which you can read here](http://www.neontsunami.com/post/model-validation-in-laravel-using-traits). I decribe a new package that I've written for Laravel 4.2+ called [watson/validating](https://github.com/dwightwatson/validating) which is a more customizable and flexible model validation trait.*
 
-I&#039;m not a fan of breaking validation out of the controller into seperate classes. It just feels like that the validation is getting too far from the form, to me anyway. I understand single responsibility and all that, but I continue to validate my forms in controllers. However, I still want to make sure that when I am saving data to the database, it is most definitely valid. There are a number of ways you can go about this: using Composer packages, extending the Eloquent model yourself, or as I propose here; using traits.
+I'm not a fan of breaking validation out of the controller into seperate classes. It just feels like that the validation is getting too far from the form, to me anyway. I understand single responsibility and all that, but I continue to validate my forms in controllers. However, I still want to make sure that when I am saving data to the database, it is most definitely valid. There are a number of ways you can go about this: using Composer packages, extending the Eloquent model yourself, or as I propose here; using traits.
 
 ## Packages
 There are a number of packages you can use which manage model validation in Laravel 4. The first is [Ardent](https://github.com/laravelbook/ardent), an older and more well-known package that began as a port of a similar Laravel 3 package. I used to like Ardent but it does a lot more than just validation now to make developers lives easier. Now I just feel like there is too much going on. The other well-known package is the aptly-named [Laravel-Model-Validation](https://github.com/JeffreyWay/Laravel-Model-Validation) by the Laracasts teacher, Jeffrey Way.
@@ -17,10 +17,10 @@ There are a number of packages you can use which manage model validation in Lara
 The second option is to do it yourself! The approach I had taken before was to create a `BaseModel` class, much like the `BaseController` that ships with the framework and then hook into model events to enforce validation. I think this is a great option if you just want some lightweight validation, and you can choose which classes you want to use your model validation by having them extend `BaseModel` instead of `Eloquent`.
 
 ## Traits
-Of course, you could instead use traits. It would work much the same as the `BaseModel` idea prior, but you get to use fancy new PHP and use the validation where you need while still allowing you to extend your models from anything you want. I&#039;ve posted an example trait which you can use for model validation (by placing `use Studious\Traits\SelfValidation` at the top of your class, inside the opening braces and using whatever namespace you want). Of course, this can easily be adapted for a `BaseModel` approach if you would prefer.
+Of course, you could instead use traits. It would work much the same as the `BaseModel` idea prior, but you get to use fancy new PHP and use the validation where you need while still allowing you to extend your models from anything you want. I've posted an example trait which you can use for model validation (by placing `use Studious\Traits\SelfValidation` at the top of your class, inside the opening braces and using whatever namespace you want). Of course, this can easily be adapted for a `BaseModel` approach if you would prefer.
 
 ```
-&lt;?php namespace Studious\Traits;
+<?php namespace Studious\Traits;
 
 use Illuminate\Support\MessageBag;
 use Validator;
@@ -41,14 +41,14 @@ trait SelfValidation {
     {
         parent::boot();
 
-        static::creating(function($model) 
-        { 
-            return $model-&gt;isValid(); 
+        static::creating(function($model)
+        {
+            return $model->isValid();
         });
 
-        static::updating(function($model) 
-        { 
-            return $model-&gt;isValid($model-&gt;removeUniquenessValidations()); 
+        static::updating(function($model)
+        {
+            return $model->isValid($model->removeUniquenessValidations());
         });
     }
 
@@ -57,9 +57,9 @@ trait SelfValidation {
      *
      * @return mixed
      */
-    public function errors() 
-    { 
-        return $this-&gt;errors; 
+    public function errors()
+    {
+        return $this->errors;
     }
 
     /**
@@ -68,15 +68,15 @@ trait SelfValidation {
      * @param  array $rules
      * @return boolean
      */
-    public function isValid(array $rules = array()) 
+    public function isValid(array $rules = array())
     {
         $rules = empty($rules) ? static::$rules : $rules;
 
-        $validation = Validator::make($this-&gt;getAttributes(), $rules);
+        $validation = Validator::make($this->getAttributes(), $rules);
 
-        if ($validation-&gt;fails())
+        if ($validation->fails())
         {
-            $this-&gt;errors = $validation-&gt;messages();
+            $this->errors = $validation->messages();
             return false;
         }
 
@@ -92,15 +92,15 @@ trait SelfValidation {
     {
         $rules = self::$rules;
 
-        foreach($rules as $field =&gt; &amp;$ruleset)
+        foreach($rules as $field => &$ruleset)
         {
             // If $ruleset is a pipe-separated string, switch it to array
-            $ruleset = is_string($ruleset) ? explode(&#039;|&#039;, $ruleset) : $ruleset;
+            $ruleset = is_string($ruleset) ? explode('|', $ruleset) : $ruleset;
 
             // Look for, and remove unique validations
-            foreach($ruleset as $key =&gt; &amp;$current_rule)
+            foreach($ruleset as $key => &$current_rule)
             {
-                if (strstr($current_rule, &#039;unique&#039;)) { unset($ruleset[$key]); }
+                if (strstr($current_rule, 'unique')) { unset($ruleset[$key]); }
             }
         }
 

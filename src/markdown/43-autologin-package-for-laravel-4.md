@@ -10,18 +10,18 @@ Maintaining high engagement on your sites with authentication can be difficult, 
 
 My Composer package, [`watson\autologin`](https://github.com/dwightwatson/autologin), allows you to easily create and utilise autologin links in your Laravel application.
 
-Once you&#039;ve installed the package correctly (see the GitHub repository for setting up the service provider and facade), you&#039;re able to generate URLs by passing in a `User` object:
+Once you've installed the package correctly (see the GitHub repository for setting up the service provider and facade), you're able to generate URLs by passing in a `User` object:
 
 	// User class implements UserInterface
 	$user = User::find(1);
 
     // Just login a user
     $link = Autologin::user($user);
-	
+
 	// Login and go to /profile
-	$link = Autologin::to($user, &#039;/profile&#039;);
-	
+	$link = Autologin::to($user, '/profile');
+
 	// Login and go to route named posts.index
-	$link = Autologin::route($user, &#039;posts.index&#039;);
-	
-I&#039;m going to be adding more features to the package over the coming weeks as we monitor its use in production and tweak it, but please feel free to make any requests or point out bugs using issues on GitHub.
+	$link = Autologin::route($user, 'posts.index');
+
+I'm going to be adding more features to the package over the coming weeks as we monitor its use in production and tweak it, but please feel free to make any requests or point out bugs using issues on GitHub.

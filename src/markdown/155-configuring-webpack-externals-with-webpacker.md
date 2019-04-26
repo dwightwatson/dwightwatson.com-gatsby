@@ -8,13 +8,13 @@ tags: ["javascript", "ruby on rails", "webpacker"]
 
 Webpack provides a feature known as [externals](https://webpack.js.org/configuration/externals/) which allows you to instruct it not to bundle any assets that you will provide externally at runtime. It’s useful if you’re going to serve assets from another location or don’t want an asset to be bundled up.
 
-It’s easy enough to hook up as well, but here’s how you would go about doing it with Rails Webpacker in the `environment.js` file.  You simply piggy-back off the default configuration provided by Webpacker and export it out as per usual. 
+It’s easy enough to hook up as well, but here’s how you would go about doing it with Rails Webpacker in the `environment.js` file.  You simply piggy-back off the default configuration provided by Webpacker and export it out as per usual.
 
 ```js
 const { environment } = require(‘@rails/webpacker’)
 
 environment.config.externals = {
-  jquery = &#039;jQuery&#039;
+  jquery = 'jQuery'
 }
 
 module.exports = environment

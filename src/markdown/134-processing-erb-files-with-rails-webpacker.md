@@ -11,13 +11,13 @@ When using Webpacker you may want to interpolate some values into your assets. F
 First, import the script that requires processing including the `.erb` suffix.
 
 ```js
-import &#039;./api.js.erb&#039;;
+import './api.js.erb';
 ```
 
 Then just include your embedded Ruby as you would usually.
 
 ```js
 export default new ApiClient({
-  apiKey: &#039;&lt;%= ENV[&#039;API_CLIENT_KEY&#039;] %&gt;&#039;
+  apiKey: '<%= ENV['API_CLIENT_KEY'] %>'
 });
 ```

@@ -12,7 +12,7 @@ Sometimes you might want to access the root element of your controller when usin
 export default class extends Stimulus.Controller {
   connect() {
     // toggle class on the root element
-    this.element.classList.toggle(&#039;element--connected&#039;)
+    this.element.classList.toggle('element--connected')
   }
 }
 ```

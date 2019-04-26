@@ -11,10 +11,10 @@ One of my favourite query scopes in Laravel is `latest()` which will order the q
 I wanted to implement this in Rails but couldn’t work out how to use a symbol as a column name for the `column_name: :sort_direction` syntax, but soon realised I could use the hashrocket to get it to work the way I wanted.
 
 ```rb
-class ApplicationRecord &lt; ActiveRecord::Base
+class ApplicationRecord < ActiveRecord::Base
   self.abstract_class = true
 
-  scope :latest, -&gt;(column = :created_at) { order(column =&gt; :desc) }
+  scope :latest, ->(column = :created_at) { order(column => :desc) }
 end
 ```
 

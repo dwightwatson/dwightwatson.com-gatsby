@@ -6,29 +6,29 @@ date: 2017-07-15
 tags: ["laravel"]
 ---
 
-Often when setting up your environment for tests you&#039;ll need to generate models that require certain relations otherwise they won&#039;t work properly. Usually a view will try and access the related models and throw an error when it can&#039;t find them but sometimes your core app logic will go wonky as well.
+Often when setting up your environment for tests you'll need to generate models that require certain relations otherwise they won't work properly. Usually a view will try and access the related models and throw an error when it can't find them but sometimes your core app logic will go wonky as well.
 
 ```php
 // Manually creating the relationship tree.
-$user = factory(User::class)-&gt;create();
-$series = factory(Series::class)-&gt;create();
+$user = factory(User::class)->create();
+$series = factory(Series::class)->create();
 
 // Note you can just pass an Eloquent model and Laravel grabs the ID
-$post = factory(Post::class)-&gt;create([
-    &#039;user_id&#039; =&gt; $user,
-    &#039;post_id&#039; =&gt; $post
+$post = factory(Post::class)->create([
+    'user_id' => $user,
+    'post_id' => $post
 ]);
 ```
 
-Lucky it&#039;s now easy to lazyily build up a relationship tree for a model, whereby you can still pass through foreign keys if you need to, but if you don&#039;t then Laravel will go and new-up the required related models and associate them as you expect.
+Lucky it's now easy to lazyily build up a relationship tree for a model, whereby you can still pass through foreign keys if you need to, but if you don't then Laravel will go and new-up the required related models and associate them as you expect.
 
 ```php
-$factory-&gt;define(App\Post::class, function ($faker) {
+$factory->define(App\Post::class, function ($faker) {
     return [
-        &#039;user_id&#039; =&gt; factory(App\User::class),
-        &#039;post_id&#039; =&gt; factory(App\Post:class),
-        &#039;title&#039; =&gt; $faker-&gt;sentence,
-        &#039;content&#039; =&gt; $faker-&gt;sentence,
+        'user_id' => factory(App\User::class),
+        'post_id' => factory(App\Post:class),
+        'title' => $faker->sentence,
+        'content' => $faker->sentence,
     ];
 });
 ```

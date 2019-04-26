@@ -25,7 +25,7 @@ The solution is to make your application assets totally agnostic of the environm
 ```haml
 :javascript
   window.App = {
-    STRIPE_PUBLISHABLE_KEY = &#039;#{ENV.fetch(&#039;STRIPE_PUBLISHABLE_KEY&#039;)}&#039;
+    STRIPE_PUBLISHABLE_KEY = '#{ENV.fetch('STRIPE_PUBLISHABLE_KEY')}'
   };
 ```
 

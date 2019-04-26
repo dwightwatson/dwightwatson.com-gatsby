@@ -6,12 +6,12 @@ export default ({ node }) => {
   return (
     <div className="mb-12">
       <div className="mb-4">
+        <small>{node.frontmatter.date}</small>
         <h3>
           <Link className="text-xl underline" to={node.fields.slug}>
             {title}
           </Link>
         </h3>
-        <small>{node.frontmatter.date}</small>
       </div>
 
       <p

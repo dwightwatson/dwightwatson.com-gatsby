@@ -6,7 +6,7 @@ date: 2017-02-28
 tags: ["heroku", "javascript", "mix"]
 ---
 
-Setting up Laravel Mix on Heroku is very similar to [how you&#039;d set it up with Elixir](https://www.neontsunami.com/posts/using-laravel-and-laravel-elixir-on-heroku). Because Laravel puts your front-end dependencies in `devDependencies` instead you just need to tweak the default configuration.
+Setting up Laravel Mix on Heroku is very similar to [how you'd set it up with Elixir](https://www.neontsunami.com/posts/using-laravel-and-laravel-elixir-on-heroku). Because Laravel puts your front-end dependencies in `devDependencies` instead you just need to tweak the default configuration.
 
 First, set `YARN_PRODUCTION` to `false` using the following command. This tells Heroku to install the `devDependencies` in your `package.json`, but leaves `NODE_ENV` as production.
 
@@ -20,17 +20,17 @@ Also add the `postinstall` key to `scripts` so that Heroku will compile your ass
 
 ```json
 {
-    &quot;engines&quot;: {
-        &quot;node&quot;: &quot;7.6.0&quot;,
-        &quot;yarn&quot;: &quot;0.21.3&quot;
+    "engines": {
+        "node": "7.6.0",
+        "yarn": "0.21.3"
     },
-    &quot;scripts&quot;: {
+    "scripts": {
         //
-        &quot;postinstall&quot;: &quot;npm run production&quot;
+        "postinstall": "npm run production"
     },
-    &quot;devDependencies&quot;: {
+    "devDependencies": {
         //
-        &quot;laravel-mix&quot;: &quot;^0.8.1&quot;
+        "laravel-mix": "^0.8.1"
     }
 }
 ```

@@ -11,7 +11,7 @@ Simple post today, but turns out Laravel has a simple feature that lets you conf
 ```php
     /*
     |--------------------------------------------------------------------------
-    | Global &quot;From&quot; Address
+    | Global "From" Address
     |--------------------------------------------------------------------------
     |
     | You may wish for all e-mails sent by your application to be sent from
@@ -20,13 +20,13 @@ Simple post today, but turns out Laravel has a simple feature that lets you conf
     |
     */
 
-    &#039;from&#039; =&gt; [
-        &#039;address&#039; =&gt; &#039;notifications@mail.myapp.com&#039;,
-        &#039;name&#039; =&gt; &#039;My App&#039;,
+    'from' => [
+        'address' => 'notifications@mail.myapp.com',
+        'name' => 'My App',
     ],
 
-    &#039;reply_to&#039; =&gt; [
-        &#039;address&#039; =&gt; &#039;support@myapp.com&#039;,
-        &#039;name&#039; =&gt; &#039;My App&#039;,
+    'reply_to' => [
+        'address' => 'support@myapp.com',
+        'name' => 'My App',
     ],
 ```

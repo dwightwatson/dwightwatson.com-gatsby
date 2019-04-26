@@ -6,18 +6,18 @@ date: 2016-12-05
 tags: ["laravel", "php", "phpunit"]
 ---
 
-Excuse the clickbait title of the post, but it does so happen that a simple change to my Laravel test suite was able to speed up total test run time from 165 seconds to just 45 seconds. It should have a helpful effect on your suite run time if you&#039;ve got a similar setup too.
+Excuse the clickbait title of the post, but it does so happen that a simple change to my Laravel test suite was able to speed up total test run time from 165 seconds to just 45 seconds. It should have a helpful effect on your suite run time if you've got a similar setup too.
 
 My application uses the `Illuminate\Foundation\Testing\DatabaseTransactions` trait throughout the tests wherever database interaction is required. Because the app is quite large it made more sense to migrate the database before the suite ran and then just rollback any changes made to the database between tests.
 
-This is the `setUp` method of my application&#039;s base `TestCase`:
+This is the `setUp` method of my application's base `TestCase`:
 
 ```php
 public function setUp()
 {
     parent::setUp();
 
-    Artisan::call(&#039;migrate&#039;);
+    Artisan::call('migrate');
 }
 ```
 
@@ -31,10 +31,10 @@ public function setUp()
     parent::setUp();
 
     if (!static::$migrationsRun) {
-        Artisan::call(&#039;migrate&#039;);
+        Artisan::call('migrate');
         static::$migrationsRun = true;
     }
 }
 ```
 
-I gather not everyone will have a similar setup (using database transactions instead of migrations, and performing the migration in the `setUp` method - perhaps you just manually migrate before running the suite), but if you do then it&#039;s an easy win.
+I gather not everyone will have a similar setup (using database transactions instead of migrations, and performing the migration in the `setUp` method - perhaps you just manually migrate before running the suite), but if you do then it's an easy win.

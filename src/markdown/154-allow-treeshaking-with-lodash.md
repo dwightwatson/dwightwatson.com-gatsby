@@ -14,8 +14,8 @@ Turns out you’ll need to switch to the module version of Lodash and instead us
 // Ends up pulling in everything.
 import { truncate } from ‘lodash’;
 
-// Just pull in the module we&#039;re interested in.
-import truncate from &#039;lodash-es/truncate&#039;;
+// Just pull in the module we're interested in.
+import truncate from 'lodash-es/truncate';
 ```
 
 That simple change should save you from pulling in the entirety of Lodash and instead only grabs what you use, meaning smaller bundle sizes for happier customers.

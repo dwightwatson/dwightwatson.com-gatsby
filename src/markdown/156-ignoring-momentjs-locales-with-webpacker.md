@@ -11,11 +11,11 @@ There’s a slight pain point when loading Moment.js through Webpack in that it 
 In your `config/webpack/environment.js` file you can instruct Webpacker to use an ignore plugin which will ignore loading any locale files in the context of Moment.
 
 ```js
-const { environment } = require(&#039;@rails/webpacker&#039;)
-const webpack = require(&#039;webpack&#039;)
+const { environment } = require('@rails/webpacker')
+const webpack = require('webpack')
 
 environment.plugins.insert(
-  &#039;IgnorePlugin&#039;,
+  'IgnorePlugin',
 	new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
 )
 

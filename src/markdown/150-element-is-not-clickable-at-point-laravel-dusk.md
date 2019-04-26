@@ -20,10 +20,10 @@ I actually came across two solutions to the issue - the first is to instruct Chr
 In your `tests/DuskTestCase.php` file you have the ability to control the arguments that instantiate the Chrome Driver. You can use the `--window-size` argument to make the size of the window large enough to fit your biggest pages.
 
 ```php
-$options = (new ChromeOptions)-&gt;addArguments([
-    &#039;--window-size=1920,1920&#039;,
-    &#039;--disable-gpu&#039;,
-    &#039;--headless&#039;
+$options = (new ChromeOptions)->addArguments([
+    '--window-size=1920,1920',
+    '--disable-gpu',
+    '--headless'
 ]);
 ```
 
@@ -31,21 +31,21 @@ $options = (new ChromeOptions)-&gt;addArguments([
 This option is a little more labour intensive as you’ll have to pop it in your tests wherever it’s required. What’s more is that it breaks the assertion train of the test so you need to do it all on a separate line.
 
 ```php
-$browser-&gt;script(&#039;window.scrollTo(0, 400);&#039;);
+$browser->script('window.scrollTo(0, 400);');
 ```
 
 Of course you’ll need to adjust the second argument there depending on how far down the page you intend to scroll. Let me show you an example of how you’ll need to break the assertion chain in order to execute this script.
 
 ```php
-$browser-&gt;visit(&#039;/&#039;)
-    -&gt;clickLink(&#039;Submit Post&#039;)
-    -&gt;type(&#039;title&#039;, &#039;The Post Title&#039;)
-    -&gt;type(&#039;description&#039;, &#039;The Post Description&#039;);
+$browser->visit('/')
+    ->clickLink('Submit Post')
+    ->type('title', 'The Post Title')
+    ->type('description', 'The Post Description');
 
-$browser-&gt;script(&#039;window.scrollTo(0, 400);&#039;);
+$browser->script('window.scrollTo(0, 400);');
 
-$browser-&gt;type(&#039;content&#039;, &#039;The Post Content&#039;)
-    -&gt;press(&#039;Submit Post&#039;)
-    -&gt;assertSee(&#039;Your Post Has Been Saved.&#039;)
-    -&gt;assertPath(&#039;/posts&#039;);
+$browser->type('content', 'The Post Content')
+    ->press('Submit Post')
+    ->assertSee('Your Post Has Been Saved.')
+    ->assertPath('/posts');
 ```

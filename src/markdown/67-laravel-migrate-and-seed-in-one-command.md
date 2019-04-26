@@ -10,4 +10,4 @@ A neat little trick for when you want to migrate your database and immediately s
 
     php artisan migrate --seed
 
-Might not be terribly useful but handy when you&#039;re putting together a new environment for a large app that take a little while to migrate and seed everything.
+Might not be terribly useful but handy when you're putting together a new environment for a large app that take a little while to migrate and seed everything.

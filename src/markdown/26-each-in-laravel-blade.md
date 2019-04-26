@@ -1,6 +1,6 @@
 ---
 title: "@each in Laravel Blade"
-path: /posts/@each-in-laravel-blade
+path: /posts/each-in-laravel-blade
 author: Dwight Watson
 date: 2013-10-11
 tags: ["laravel", "php"]

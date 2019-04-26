@@ -21,34 +21,34 @@ In `app/config/cache.php` we added the following:
     |
     */
 
-    &#039;tiny&#039; =&gt; 5,
+    'tiny' => 5,
 
-    &#039;short&#039; =&gt; 60,
+    'short' => 60,
 
-    &#039;medium&#039; =&gt; 720,
+    'medium' => 720,
 
-    &#039;long&#039; =&gt; 1440
-	
+    'long' => 1440
+
 Of course, you may want to change these values. Tiny is 5 minutes, short is 1 hour, medium is 12 hours and long is 24 hours. Now, there are two ways to access this config values throughout your application:
 
 ## Facade
 
-The first way is to use the facade. It&#039;s a Laravel facade so still perfectly easy to test, but up to you as to how you want to go.
+The first way is to use the facade. It's a Laravel facade so still perfectly easy to test, but up to you as to how you want to go.
 
     // Get tiny cache length
-    $tinyCacheLength = Config::get(&#039;cache.tiny&#039;);
-	
+    $tinyCacheLength = Config::get('cache.tiny');
+
 	// Cache all users for 5 minutes.
-	$users = User::remember($tinyCacheLength)-&gt;all();
-	
+	$users = User::remember($tinyCacheLength)->all();
+
 ## Dependency injection
 
 The second way, the way we do it, is by injecting the dependency into the controller that requires access to these configuration values.
 
-    &lt;?php
-	
+    <?php
+
 	use Illuminate\Config\Repository;
-	
+
 	class UsersController extends BaseController
 	{
 		/**
@@ -57,20 +57,20 @@ The second way, the way we do it, is by injecting the dependency into the contro
 		 * @var \Illuminate\Config\Repository
 		 */
 		 protected $config;
-		 
+
 		 public function __construct(Repository $config)
 		 {
-		 		$this-&gt;config = $config;
+		 		$this->config = $config;
 		 }
-		 
+
 		 public function index()
 		 {
-		 		// Of course, you&#039;ll probably want to inject the User model too, but we&#039;ll
+		 		// Of course, you'll probably want to inject the User model too, but we'll
 				// keep it simple for now.
-				$users = User::remember($this-&gt;config-&gt;get(&#039;cache.medium&#039;))-&gt;all();
-				
-				return View::make(&#039;users.index&#039;, compact(&#039;users&#039;));
+				$users = User::remember($this->config->get('cache.medium'))->all();
+
+				return View::make('users.index', compact('users'));
 		 }
 	}
-	
+
 Now, probably not the most foolproof way, but when we were in a total rush to get this thing out the front door it was an acceptable solution.

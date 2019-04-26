@@ -12,19 +12,19 @@ Previously we explicitly told Elixir of all the assets we wanted it to version. 
 
 ```js
 mix.version([
-  &#039;public/css/app.css&#039;,
-  &#039;public/js/app.js&#039;,
+  'public/css/app.css',
+  'public/js/app.js',
 
-  &#039;public/css/mobile/app.css&#039;,
-  &#039;public/js/mobile/app.js&#039;,
+  'public/css/mobile/app.css',
+  'public/js/mobile/app.js',
 
-  &#039;public/css/admin/app.css&#039;,
-  &#039;public/js/admin/app.js&#039;
+  'public/css/admin/app.css',
+  'public/js/admin/app.js'
 ]);
 ```
 
-However, turns out there&#039;s a better way. It&#039;s actually something [I&#039;ve written about before, but in relation to versioning image assets](https://www.neontsunami.com/posts/using-laravel-elixir-to-version-image-assets). Because we can use wildcards we can just tell Elixir to version our CSS/JS assets. We explicitly use `*.css` and `*.js` however so that the map files aren&#039;t also versioned.
+However, turns out there's a better way. It's actually something [I've written about before, but in relation to versioning image assets](https://www.neontsunami.com/posts/using-laravel-elixir-to-version-image-assets). Because we can use wildcards we can just tell Elixir to version our CSS/JS assets. We explicitly use `*.css` and `*.js` however so that the map files aren't also versioned.
 
 ```js
-mix.version([&#039;public/**/*.css&#039;, &#039;public/**/*.js&#039;]);
+mix.version(['public/**/*.css', 'public/**/*.js']);
 ```

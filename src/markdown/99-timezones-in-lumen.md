@@ -19,11 +19,11 @@ No matter however, as you’ll find in the Lumen `Application` constructor it wi
  */
 public function __construct($basePath = null)
 {
-    date_default_timezone_set(env(&#039;APP_TIMEZONE&#039;, &#039;UTC&#039;));
+    date_default_timezone_set(env('APP_TIMEZONE', 'UTC'));
 
-    $this-&gt;basePath = $basePath;
-    $this-&gt;bootstrapContainer();
-    $this-&gt;registerErrorHandling();
+    $this->basePath = $basePath;
+    $this->bootstrapContainer();
+    $this->registerErrorHandling();
 }
 ```
 

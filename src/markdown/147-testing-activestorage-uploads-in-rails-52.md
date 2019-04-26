@@ -19,9 +19,9 @@ end
 Once that’s done you can use `fixture_file_upload` to get an image object you can submit with your request. In this example I’m using an image that’s in my public folder, but you can use whatever file you like.
 
 ```rb
-describe &#039;POST #create&#039; do
-  it &#039;attaches the uploaded file&#039; do
-    file = fixture_file_upload(Rails.root.join(&#039;public&#039;, &#039;apple-touch-icon.png&#039;), &#039;image/png&#039;)
+describe 'POST #create' do
+  it 'attaches the uploaded file' do
+    file = fixture_file_upload(Rails.root.join('public', 'apple-touch-icon.png'), 'image/png')
     expect {
 		post :create, params: { post: { image: file } }
     }.to change(ActiveStorage::Attachment, :count).by(1)

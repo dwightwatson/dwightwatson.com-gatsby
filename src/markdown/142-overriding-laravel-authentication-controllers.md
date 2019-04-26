@@ -19,11 +19,11 @@ I noticed that the logout method doesn’t really provide any hooks for you to c
  */
 public function logout(Request $request)
 {
-    $this-&gt;guard()-&gt;logout();
+    $this->guard()->logout();
 
-    $request-&gt;session()-&gt;invalidate();
+    $request->session()->invalidate();
 
-    return redirect(&#039;/&#039;);
+    return redirect('/');
  }
 ```
 
@@ -45,9 +45,9 @@ class LoginController extends Controller
 {
     public function logout(Request $request)
     {
-        dispatch(new RecordLogout($request-&gt;user());
+        dispatch(new RecordLogout($request->user());
 
-        return $this-&gt;parentLogout($request);
+        return $this->parentLogout($request);
     }
 }
 ```
