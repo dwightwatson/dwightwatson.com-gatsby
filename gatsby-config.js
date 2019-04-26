@@ -14,7 +14,7 @@ module.exports = {
       resolve: `gatsby-plugin-purgecss`,
       options: {
         tailwind: true,
-        ignore: ['prismjs']
+        ignore: ['prismjs/']
       }
     },
     {
