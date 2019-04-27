@@ -28,20 +28,20 @@ class PostTemplate extends React.Component {
           {post.frontmatter.tags && post.frontmatter.tags.map(tag => <Tag key={tag} tag={tag} />)}
         </div>
 
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div className="leading-loose" dangerouslySetInnerHTML={{ __html: post.html }} />
 
         <hr/>
         <Bio />
 
-        <ul class="mb-5">
-          <li class="mb-5">
+        <ul className="mb-5">
+          <li className="mb-5">
             {previous && (
               <Link to={previous.frontmatter.path} rel="prev" className="underline">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
-          <li class="text-right">
+          <li className="text-right">
             {next && (
               <Link to={next.frontmatter.path} rel="next" className="underline">
                 {next.frontmatter.title} →
