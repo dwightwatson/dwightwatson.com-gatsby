@@ -19,7 +19,7 @@ class Index extends React.Component {
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         <Bio />
-        {posts.map(({ node }) => <Post key={node.fields.slug} node={node} />)}
+        {posts.map(({ node }) => <Post key={node.id} node={node} />)}
       </Layout>
     )
   }
@@ -37,13 +37,12 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
+          id
           excerpt
-          fields {
-            slug
-          }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
             title
+            path
+            date(formatString: "MMMM DD, YYYY")
           }
         }
       }

@@ -25,7 +25,7 @@ const Tags = (props) => {
       </div>
 
       <ul>
-        {edges.map(({ node }) => <Post key={node.fields.slug} node={node}/>)}
+        {edges.map(({ node }) => <Post key={node.id} node={node}/>)}
       </ul>
     </Layout>
   )
@@ -49,12 +49,11 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node {
+          id
           excerpt
-          fields {
-            slug
-          }
           frontmatter {
             title
+            path
             date(formatString: "MMMM DD, YYYY")
           }
         }

@@ -36,14 +36,14 @@ class PostTemplate extends React.Component {
         <ul class="mb-5">
           <li class="mb-5">
             {previous && (
-              <Link to={previous.fields.slug} rel="prev" className="underline">
+              <Link to={previous.frontmatter.path} rel="prev" className="underline">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li class="text-right">
             {next && (
-              <Link to={next.fields.slug} rel="next" className="underline">
+              <Link to={next.frontmatter.path} rel="next" className="underline">
                 {next.frontmatter.title} →
               </Link>
             )}
@@ -57,14 +57,14 @@ class PostTemplate extends React.Component {
 export default PostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query($path: String!) {
     site {
       siteMetadata {
         title
         author
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
       id
       excerpt(pruneLength: 160)
       html
