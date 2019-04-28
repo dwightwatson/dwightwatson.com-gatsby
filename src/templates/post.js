@@ -20,7 +20,7 @@ class PostTemplate extends React.Component {
         />
 
         <div className="mb-4">
-          <h1 className="text-2xl">{post.frontmatter.title}</h1>
+          <h1 className="text-2xl break-words">{post.frontmatter.title}</h1>
           <small>{post.frontmatter.date}</small>
         </div>
 
