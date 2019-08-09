@@ -28,7 +28,7 @@ class PostTemplate extends React.Component {
           {post.frontmatter.tags && post.frontmatter.tags.map(tag => <Tag key={tag} tag={tag} />)}
         </div>
 
-        <div className="leading-loose" dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div className="post" dangerouslySetInnerHTML={{ __html: post.html }} />
 
         <hr/>
         <Bio />

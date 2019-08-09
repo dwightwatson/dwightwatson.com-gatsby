@@ -4,6 +4,19 @@
 
 @import 'github.css';
 
-p {
+.post {
+  @apply leading-loose;
+}
+
+.post p {
   @apply mb-4;
+}
+
+.post a {
+  @apply underline;
+  text-decoration-color: #4299e1;
+}
+
+.post ul {
+  @apply list-disc ml-5;
 }
