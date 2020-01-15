@@ -19,4 +19,4 @@ EDIT: Just got word from CircleCI with details on how to up the `max_connections
 
  	SET GLOBAL max_connections = <new value>;
 
-EDIT 2: I’ve now written another post about [solving the “too many connections” issue when testing Laravel 5.1](http://www.neontsunami.com/posts/too-many-connections-using-phpunit-for-testing-laravel-51).
+EDIT 2: I’ve now written another post about [solving the “too many connections” issue when testing Laravel 5.1](https://www.dwightwatson.com/posts/too-many-connections-using-phpunit-for-testing-laravel-51).

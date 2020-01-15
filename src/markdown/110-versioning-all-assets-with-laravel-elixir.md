@@ -23,7 +23,7 @@ mix.version([
 ]);
 ```
 
-However, turns out there's a better way. It's actually something [I've written about before, but in relation to versioning image assets](https://www.neontsunami.com/posts/using-laravel-elixir-to-version-image-assets). Because we can use wildcards we can just tell Elixir to version our CSS/JS assets. We explicitly use `*.css` and `*.js` however so that the map files aren't also versioned.
+However, turns out there's a better way. It's actually something [I've written about before, but in relation to versioning image assets](https://www.dwightwatson.com/posts/using-laravel-elixir-to-version-image-assets). Because we can use wildcards we can just tell Elixir to version our CSS/JS assets. We explicitly use `*.css` and `*.js` however so that the map files aren't also versioned.
 
 ```js
 mix.version(['public/**/*.css', 'public/**/*.js']);

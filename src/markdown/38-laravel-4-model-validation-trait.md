@@ -6,7 +6,7 @@ date: 2013-12-22
 tags: ["laravel", "php"]
 ---
 
-*EDIT: I've since written an updated post on this topic, [which you can read here](http://www.neontsunami.com/post/model-validation-in-laravel-using-traits). I decribe a new package that I've written for Laravel 4.2+ called [watson/validating](https://github.com/dwightwatson/validating) which is a more customizable and flexible model validation trait.*
+*EDIT: I've since written an updated post on this topic, [which you can read here](https://www.dwightwatson.com/post/model-validation-in-laravel-using-traits). I decribe a new package that I've written for Laravel 4.2+ called [watson/validating](https://github.com/dwightwatson/validating) which is a more customizable and flexible model validation trait.*
 
 I'm not a fan of breaking validation out of the controller into seperate classes. It just feels like that the validation is getting too far from the form, to me anyway. I understand single responsibility and all that, but I continue to validate my forms in controllers. However, I still want to make sure that when I am saving data to the database, it is most definitely valid. There are a number of ways you can go about this: using Composer packages, extending the Eloquent model yourself, or as I propose here; using traits.
 

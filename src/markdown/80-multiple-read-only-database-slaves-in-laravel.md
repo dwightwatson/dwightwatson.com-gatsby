@@ -6,7 +6,7 @@ date: 2015-01-14
 tags: ["aws", "laravel", "mysql", "postgresql"]
 ---
 
-[See an updated post on multiple read-slaves here](https://www.neontsunami.com/posts/multiple-database-read-write-connections-in-laravel).
+[See an updated post on multiple read-slaves here](https://www.dwightwatson.com/posts/multiple-database-read-write-connections-in-laravel).
 
 Having recently moved one of our applications to AWS I've discovered how easy it is to create read-only database replicas if you're using the RDS service. RDS makes it really easy to provision an optimised database server for your application and supports a range of engines out of the box, including MySQL, Postgres and a new highly-optimised MySQL fork called Aurora.
 

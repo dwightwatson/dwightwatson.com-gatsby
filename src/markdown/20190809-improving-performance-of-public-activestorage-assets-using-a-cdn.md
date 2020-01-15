@@ -6,7 +6,7 @@ date: 2019-08-09
 tags: ["rails", "activestorage", "imgix"]
 ---
 
-I've written [previously about monkey-patching the ActiveStorage representations controller](https://www.neontsunami.com/posts/caching-variants-with-activestorage) in order to proxy content so that it could be cached by a CDN.
+I've written [previously about monkey-patching the ActiveStorage representations controller](https://www.dwightwatson.com/posts/caching-variants-with-activestorage) in order to proxy content so that it could be cached by a CDN.
 
 It works, but there are some issues: you're overriding Rails code, and your app will still take the brunt of the initial transformation requests. With large or abnormal uploads there's still additional load (and with it, performance decreases) and potential memory leaks can occur.
 
