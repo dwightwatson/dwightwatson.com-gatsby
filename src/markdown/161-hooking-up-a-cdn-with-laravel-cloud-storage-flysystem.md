@@ -17,7 +17,7 @@ Storage::cloud()->url('file.jpg');
 
 This is great and all but it's generating a link directly to my bucket - I'm putting more load on that bucket and not leveraging any mechanism to improve performance. Luckily that's easy by adding a `url` key to your driver configuration and providing it a hostname to use for URL generation.
 
-In my example below I'm using an environment variable (so I would set `CDN_URL` to `https://cdn.neontsunami.com`) which is great because you can leave it empty on your staging environments. When the `url` key is empty Laravel will simply generate a link directly to the bucket just as before, however when it's present it will use your new host. I have a CloudFront CDN set up that points directly to the bucket so it's able to cache my assets.
+In my example below I'm using an environment variable (so I would set `CDN_URL` to `https://cdn.dwightwatson.com`) which is great because you can leave it empty on your staging environments. When the `url` key is empty Laravel will simply generate a link directly to the bucket just as before, however when it's present it will use your new host. I have a CloudFront CDN set up that points directly to the bucket so it's able to cache my assets.
 
 ```php
 's3' => [

@@ -60,7 +60,7 @@ As you can see, it'll look on your `FormRequest` object for a place to redirect,
 
 Where it becomes more difficult is if you want to redirect to route or an action, but with parameters. For example if you're editing a resource and the form request fails, you'll want to redirect back to the edit route for that *specific* resource. You can't just make the `$redirectRoute = 'posts.edit'` because the route will require the ID of the model.
 
-Using a trick I talked about [when using the unique validation rule in Laravel FormRequests](http://www.neontsunami.com/posts/using-unique-rule-ids-in-laravel-formrequests) you can override the `getRedirectUrl()` method in your `FormRequest` and control the redirect your way.
+Using a trick I talked about [when using the unique validation rule in Laravel FormRequests](https://www.dwightwatson.com/posts/using-unique-rule-ids-in-laravel-formrequests) you can override the `getRedirectUrl()` method in your `FormRequest` and control the redirect your way.
 
     /**
      * Get the URL to redirect to on a validation error.

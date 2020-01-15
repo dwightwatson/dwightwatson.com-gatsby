@@ -32,7 +32,7 @@ class SecureRequest
     {
         if (app()->environment('production')) {
             if (substr($request->header('Host'), 0, 4)  !== 'www.') {
-               $request->headers->set('Host', 'www.neonstunami.com.au');
+               $request->headers->set('Host', 'www.dwightwatson.com');
 
                return redirect()->secure($request->path(), 301);
             }

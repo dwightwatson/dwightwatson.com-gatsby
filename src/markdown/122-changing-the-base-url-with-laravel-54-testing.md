@@ -14,7 +14,7 @@ While upgrading my app from to Laravel 5.4 and replacing my "BrowserKit" style t
  *
  * @var string
  */
-protected $baseUrl = 'http://api.neontsunami.com';
+protected $baseUrl = 'http://api.dwightwatson.com';
 ```
 
 However it seems Laravel 5.4 doesn't look for a `baseUrl` property and instead relies on the `app.url` configuration. Luckily, this is easy to change out on the fly in your tests, even in the `setUp` method.

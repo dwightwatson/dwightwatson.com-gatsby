@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Neon Tsunami`,
+    title: `dwightwatson.com`,
     author: `Dwight Watson`,
     description: `A blog on Laravel & Rails.`,
-    siteUrl: `https://www.neontsunami.com`,
+    siteUrl: `https://www.dwightwatson.com`,
     social: {
       twitter: `DwightConrad`,
     },
@@ -51,8 +51,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Neon Tsunami`,
-        short_name: `Neon Tsunami`,
+        name: `Dwight Watson`,
+        short_name: `Dwight Watson`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#4299e1`,

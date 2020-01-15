@@ -40,7 +40,7 @@ Now you can just place that file on your server and you're good to go in product
 
 	return array(
     	'DATABASE_HOST'     => 'localhost',
-    	'DATABASE_NAME'     => 'neontsunami',
+    	'DATABASE_NAME'     => 'dwightwatson',
     	'DATABASE_USERNAME' => 'homestead',
     	'DATABASE_PASSWORD' => 'secret'
 	);
