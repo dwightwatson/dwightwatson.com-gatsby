@@ -1,11 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `dwightwatson.com`,
+    title: `Dwight Watson`,
     author: `Dwight Watson`,
     description: `A blog on Laravel & Rails.`,
     siteUrl: `https://www.dwightwatson.com`,
     social: {
       twitter: `DwightConrad`,
+      github: `dwightwatson`,
     },
   },
   plugins: [

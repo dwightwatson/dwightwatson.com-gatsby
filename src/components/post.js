@@ -7,7 +7,7 @@ export default ({ node }) => {
       <div className="mb-4">
         <small>{node.frontmatter.date}</small>
         <h3>
-          <Link className="text-xl underline" to={node.frontmatter.path}>
+          <Link className="text-xl text-blue-500 underline" to={node.frontmatter.path}>
             {node.frontmatter.title}
           </Link>
         </h3>

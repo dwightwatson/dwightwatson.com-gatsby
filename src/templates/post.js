@@ -36,14 +36,14 @@ class PostTemplate extends React.Component {
         <ul className="mb-5">
           <li className="mb-5">
             {previous && (
-              <Link to={previous.frontmatter.path} rel="prev" className="underline">
+              <Link to={previous.frontmatter.path} rel="prev" className="text-blue-500 underline">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li className="text-right">
             {next && (
-              <Link to={next.frontmatter.path} rel="next" className="underline">
+              <Link to={next.frontmatter.path} rel="next" className="text-blue-500 underline">
                 {next.frontmatter.title} →
               </Link>
             )}
