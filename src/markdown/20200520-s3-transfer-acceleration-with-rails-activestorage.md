@@ -2,7 +2,7 @@
 title: "S3 Transfer Acceleration with Rails ActiveStorage"
 path: /posts/s3-transfer-acceleration-with-rails-activestorage
 author: Dwight Watson
-date: 2020-04-22
+date: 2020-05-20
 tags: ["rails", "activestorage", "aws"]
 ---
 
