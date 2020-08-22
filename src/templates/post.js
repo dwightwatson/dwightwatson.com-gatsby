@@ -30,7 +30,7 @@ class PostTemplate extends React.Component {
         </div>
 
         <div
-          className="prose-lg mb-8"
+          className="prose prose-lg mb-8"
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
 
