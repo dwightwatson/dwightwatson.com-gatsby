@@ -3,3 +3,8 @@
 @tailwind utilities;
 
 @import "github.css";
+
+.token.operator,
+.token.punctuation {
+  color: #e2e8f0;
+}
