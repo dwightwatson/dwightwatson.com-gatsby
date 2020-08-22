@@ -12,13 +12,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-postcss`,
     {
-      resolve: `gatsby-plugin-purgecss`,
-      options: {
-        tailwind: true,
-        ignore: ['github.css']
-      }
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdown`,
@@ -28,9 +21,7 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [
-          `gatsby-remark-prismjs`,
-        ],
+        plugins: [`gatsby-remark-prismjs`],
       },
     },
     {
@@ -45,7 +36,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: 'UA-23727271-4',
+        trackingId: "UA-23727271-4",
       },
     },
     `gatsby-plugin-feed`,

@@ -2,25 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-@import 'github.css';
-
-.post {
-  @apply leading-loose;
-}
-
-.post p {
-  @apply mb-4;
-}
-
-.post h2 {
-  @apply leading-tight text-xl font-bold text-black mb-2 mt-10;
-}
-
-.post a {
-  @apply underline;
-  text-decoration-color: #4299e1;
-}
-
-.post ul {
-  @apply list-disc ml-5;
-}
+@import "github.css";
