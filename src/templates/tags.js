@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import Post from "../components/post"
 
 const Tags = (props) => {
-  const { pageContext, data } = props;
+  const { pageContext, data } = props
   const { tag } = pageContext
   const siteTitle = props.data.site.siteMetadata.title
   const { edges, totalCount } = data.allMarkdownRemark
@@ -14,10 +14,7 @@ const Tags = (props) => {
 
   return (
     <Layout location={props.location} title={siteTitle}>
-      <SEO
-        title={tag}
-        description={`Posts related to ${tagHeader}`}
-      />
+      <SEO title={tag} description={`Posts related to ${tagHeader}`} />
 
       <div className="mb-4">
         <h1 className="text-2xl">#{tag}</h1>
@@ -25,7 +22,9 @@ const Tags = (props) => {
       </div>
 
       <ul>
-        {edges.map(({ node }) => <Post key={node.id} node={node}/>)}
+        {edges.map(({ node }) => (
+          <Post key={node.id} node={node} />
+        ))}
       </ul>
     </Layout>
   )
@@ -54,7 +53,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             path
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "MMMM D, YYYY")
           }
         }
       }
