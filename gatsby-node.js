@@ -1,6 +1,5 @@
 const _ = require(`lodash`)
 const path = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -13,6 +12,7 @@ exports.createPages = ({ graphql, actions }) => {
     `
       {
         allMarkdownRemark(
+          filter: { fields: { collection: { eq: "posts" } } }
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
         ) {
@@ -28,7 +28,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `
-  ).then(result => {
+  ).then((result) => {
     if (result.errors) {
       throw result.errors
     }
@@ -37,7 +37,7 @@ exports.createPages = ({ graphql, actions }) => {
     const posts = result.data.allMarkdownRemark.edges
 
     const postsPerPage = 10
-    const numberOfPages = Math.ceil(posts.length / postsPerPage);
+    const numberOfPages = Math.ceil(posts.length / postsPerPage)
 
     Array.from({ length: numberOfPages }).forEach((_, i) => {
       createPage({
@@ -68,7 +68,7 @@ exports.createPages = ({ graphql, actions }) => {
 
     let tags = []
 
-    _.each(posts, edge => {
+    _.each(posts, (edge) => {
       if (_.get(edge, "node.frontmatter.tags")) {
         tags = tags.concat(edge.node.frontmatter.tags)
       }
@@ -76,7 +76,7 @@ exports.createPages = ({ graphql, actions }) => {
 
     tags = _.uniq(tags)
 
-    tags.forEach(tag => {
+    tags.forEach((tag) => {
       createPage({
         path: `/tags/${_.kebabCase(tag)}/`,
         component: tagsTemplate,
@@ -92,12 +92,18 @@ exports.createPages = ({ graphql, actions }) => {
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
+
   if (node.internal.type === `MarkdownRemark`) {
-    const value = node.frontmatter.path
     createNodeField({
-      name: `slug`,
       node,
-      value,
+      name: `collection`,
+      value: getNode(node.parent).sourceInstanceName,
+    })
+
+    createNodeField({
+      node,
+      name: `slug`,
+      value: node.frontmatter.path,
     })
   }
 }
