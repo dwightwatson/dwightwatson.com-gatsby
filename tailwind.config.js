@@ -1,17 +1,15 @@
-module.exports = {
-  future: {
-    removeDeprecatedGapUtilities: true,
-  },
+const colors = require("tailwindcss/colors")
 
+module.exports = {
   purge: ["./src/**/*.js", "./src/**/*.jsx", "./src/**/*.ts", "./src/**/*.tsx"],
 
   theme: {
-    // Some useful comment
+    colors: {
+      blue: colors.blue,
+    },
   },
 
-  variants: {
-    // Some useful comment
-  },
+  variants: {},
 
   plugins: [require("@tailwindcss/typography")],
 }
