@@ -34,7 +34,6 @@ class PostTemplate extends React.Component {
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
 
-        <hr />
         <Bio />
 
         <ul className="mb-5">
