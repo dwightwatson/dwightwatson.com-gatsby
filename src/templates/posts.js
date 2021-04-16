@@ -4,7 +4,7 @@ import { graphql, Link } from "gatsby"
 import Post from "../components/post"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 class Index extends React.Component {
   render() {
@@ -15,7 +15,7 @@ class Index extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO
+        <Seo
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />

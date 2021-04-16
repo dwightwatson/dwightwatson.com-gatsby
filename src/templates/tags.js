@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Layout from "../components/layout"
 import Post from "../components/post"
 
@@ -14,7 +14,7 @@ const Tags = (props) => {
 
   return (
     <Layout location={props.location} title={siteTitle}>
-      <SEO title={tag} description={`Posts related to ${tagHeader}`} />
+      <Seo title={tag} description={`Posts related to ${tagHeader}`} />
 
       <div className="mb-4">
         <h1 className="text-2xl">#{tag}</h1>
