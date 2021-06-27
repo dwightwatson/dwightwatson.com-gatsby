@@ -48,7 +48,7 @@ Often there will not be much you can do about these - if they are dependencies o
 
 However if there are new releases then it is worth revisiting their documentation/changelogs. If there's nothing major you can spend the 5-10 minutes required to make and changes and update your dependency constraints, otherwise allocate some time to make the changes when you have a chance.
 
-***
+---
 
 There are a number of benefits to keeping your dependencies updated but at the end of the day it comes down to keeping your app secure, your developers happy and making it easier for you to upgrade to newer versions of Laravel as they become available. Do your updates.
 
@@ -58,7 +58,7 @@ The Laravel community has grown substantially over the last few years. It is luc
 
 It is important to keep in tune with this community the changes it brings along the way. It gives you an opportunity to participate in this conversation (if you so desire). It also gives you insight into the way other Laravel developers are writing code which can help inspire and improve your own.
 
-> For example, validation in Laravel has evolved a number of times. From calling manually `Validator::make()` to being able to call `$this->validate($request, [...])` in your controllers and finally to `FormRequest`s and requests that can validate themselves. All of these options *still* work but it's important to know what's newer and what people are using.
+> For example, validation in Laravel has evolved a number of times. From calling manually `Validator::make()` to being able to call `$this->validate($request, [...])` in your controllers and finally to `FormRequest`s and requests that can validate themselves. All of these options _still_ work but it's important to know what's newer and what people are using.
 
 As these sorts of changes propagate around I have always found it best to follow the convention, even when it's something I might not have a preference for. We use a "convention over configuration" framework so that we have less decisions to make.
 
@@ -100,11 +100,11 @@ You know [Jeffrey Way](https://twitter.com/jeffrey_way) as the guy behind [Larac
 
 #### Matt Stauffer
 
-[Matt Stauffer](https://twitter.com/stauffermatt) wrote the book  (literally) on getting started - [Laravel: Up & Running](https://laravelupandrunning.com/). In addition he runs a Laravel agency which means he has a lot of insight into consistency creating solid apps shared [on his blog](https://mattstauffer.com/). He also hosts the [Laravel Podcast](http://www.laravelpodcast.com/) which has also featured Taylor and Jeffrey.
+[Matt Stauffer](https://twitter.com/stauffermatt) wrote the book (literally) on getting started - [Laravel: Up & Running](https://laravelupandrunning.com/). In addition he runs a Laravel agency which means he has a lot of insight into consistency creating solid apps shared [on his blog](https://mattstauffer.com/). He also hosts the [Laravel Podcast](http://www.laravelpodcast.com/) which has also featured Taylor and Jeffrey.
 
-***
+---
 
-If you can find a way to keep up to date with the changes in the framework and the direction the community is moving it will help you keep your code up-to-date and (hopefully) more future proof.    Not everyone will have time for Twitter and listening to podcasts, but the changelogs are a great place to start.
+If you can find a way to keep up to date with the changes in the framework and the direction the community is moving it will help you keep your code up-to-date and (hopefully) more future proof. Not everyone will have time for Twitter and listening to podcasts, but the changelogs are a great place to start.
 
 ## The Laravel Way
 
@@ -124,15 +124,15 @@ Take a look at the controller scaffold when you use the `--model` or `--resource
 
 This is a convention that has flowed over from Rails and there is quite a bit you can read about it online. Effectively you use a single controller to manage each of the actions for a resource (or model).
 
-| Request | Controller |
-|:--|:--|
-| `GET /posts` | `PostController@index` |
-| `GET /posts/create` | `PostController@create` |
-| `POST /posts` | `PostController@store` |
-| `GET /posts/{post}` | `PostController@show` |
-| `GET /posts/{post}/edit` | `PostController@edit` |
-| `PUT /posts/{post}` | `PostController@update` |
-| `DELETE /posts/{post}` | `PostController@destroy` |
+| Request                  | Controller               |
+| :----------------------- | :----------------------- |
+| `GET /posts`             | `PostController@index`   |
+| `GET /posts/create`      | `PostController@create`  |
+| `POST /posts`            | `PostController@store`   |
+| `GET /posts/{post}`      | `PostController@show`    |
+| `GET /posts/{post}/edit` | `PostController@edit`    |
+| `PUT /posts/{post}`      | `PostController@update`  |
+| `DELETE /posts/{post}`   | `PostController@destroy` |
 
 The `index` action is responsible for showing a list of the posts, `create`/`store` are for the form and storing a new post, `show` for displaying a single post, `edit`/`update` for the form and updating an existing post and finally `destroy` for removing a single resource.
 
@@ -187,12 +187,11 @@ public function store(Request $request)
 }
 ```
 
-> This example obviously forgoes validation, but it's also worth nothing that the return value of `$this->validate()` or $request->validate()` is the input filtered by fields that are validated. If you validate for only the fields you want to assign to your model then you can use that return value instead of `$request->only()`.
+> This example obviously forgoes validation, but it's also worth nothing that the return value of `$this->validate()` or `$request->validate()` is the input filtered by fields that are validated. If you validate for only the fields you want to assign to your model then you can use that return value instead of `$request->only()`.
 
-***
+---
 
 By writing code the way the framework expects you to you're making it easier for yourself and others to follow along. It's more likely to stand the test of time as it won't be broken by backwards incompatible changes in the framework.
-
 
 ## Make the hard changes
 
@@ -206,15 +205,15 @@ Cleaning up the sore points of your app that haven't aged well can improve the h
 
 Often you might leave these sorts of feature rewrites until something comes along that requires some substantial changes and it gives you a good opportunity to make some overreaching improvements. However there have been times I've scheduled these sorts of changes just to better the app.
 
-> One example of this has been our (as yet, incomplete) project to replace our jQuery code with Vue components. The jQuery code *worked fine* and our customers will see no benefit from the migration to Vue components, but there's a morale boost in moving the app forward by adopting Laravel's front-end framework of choice and leaving old, unpleasant code behind.
+> One example of this has been our (as yet, incomplete) project to replace our jQuery code with Vue components. The jQuery code _worked fine_ and our customers will see no benefit from the migration to Vue components, but there's a morale boost in moving the app forward by adopting Laravel's front-end framework of choice and leaving old, unpleasant code behind.
 
-***
+---
 
-This might be a more controversial suggestion but it's an approach I've worked with for a while and it hasn't bitten me in the ass *yet*. If you have the time to fix old design decisions even though it's going to hurt I think it's worth it.
+This might be a more controversial suggestion but it's an approach I've worked with for a while and it hasn't bitten me in the ass _yet_. If you have the time to fix old design decisions even though it's going to hurt I think it's worth it.
 
 ## Write tests
 
-First getting into testing *is hard*. It's hard to get a sense of what to test and how to test it. It's hard to convince your superiors that the additional time to learn and implement these flows are worth it. The thing is that they are very much worth it.
+First getting into testing _is hard_. It's hard to get a sense of what to test and how to test it. It's hard to convince your superiors that the additional time to learn and implement these flows are worth it. The thing is that they are very much worth it.
 
 > If you don't have tests in your app then there's no better time to start then now. You don't need to start from scratch, instead just incrementally add tests as you can. For some real-world learning check out [Test Driven Laravel](https://course.testdrivenlaravel.com/) by Adam Wathan.
 
@@ -224,7 +223,7 @@ This confidence extends to your maintenance cycle as well. When you pull in new 
 
 On this project we're only up to around 60% test coverage. You don't need to aim for 100% coverage - and any coverage is better than none. However, the coverage we have is over the most important user flows (and includes Laravel Dusk tests, actually run inside a real browser). Getting these most important flows covered by tests gives you the most bang for your buck in terms of knowing you aren't impacting customer experiences.
 
-***
+---
 
 Having any test coverage gives you the freedom to move fast without worrying about impacting your customers. You can test against new dependencies and also attempt solid refactoring of your code with ease.
 
@@ -232,4 +231,4 @@ Having any test coverage gives you the freedom to move fast without worrying abo
 
 Maintaining a Laravel app over time takes a lot of time and care. I don't think it's important to do for every use-case. If you have small apps that are not touched often then it's fine to leave them as-is and deal with any pain points as they come up. But if you have an app that is going to see continued use then it it well worth the effort to incrementally keep it up to date.
 
-Keeping your dependencies up to date is a dull but it's easy enough. Keeping on top of changes in the community and getting a feel for the direction of the framework help you write more future-proof code. Getting a feel for the "Laravel Way" means your code will be simpler and less fragile through new releases.  Writing tests gives you the confidence to keep moving forward without breaking anything for your customers.
+Keeping your dependencies up to date is a dull but it's easy enough. Keeping on top of changes in the community and getting a feel for the direction of the framework help you write more future-proof code. Getting a feel for the "Laravel Way" means your code will be simpler and less fragile through new releases. Writing tests gives you the confidence to keep moving forward without breaking anything for your customers.
