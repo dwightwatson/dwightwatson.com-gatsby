@@ -25,7 +25,7 @@ class Layout extends React.Component {
 
     return (
       <div className="font-sans border-t-4 border-blue-500">
-        <div className="max-w-2xl px-4">
+        <div className="max-w-prose px-4">
           <header className="py-4">{header}</header>
           <main>{children}</main>
         </div>
