@@ -53,11 +53,10 @@ end
 
 ## Dynamic maps
 
-You can use `MapKit.JWT` to generate the token you'll need to pass into the `authorizationCallback` to initialize MapKit JS. How you pass the token into your JavaScript will depend on your front-end approach, but with Stimulus.JS I just pass it through as a data attribute.
+You can use `MapKit.token` to generate the token you'll need to pass into the `authorizationCallback` to initialize MapKit JS. How you pass the token into your JavaScript will depend on your front-end approach, but with Stimulus.JS I just pass it through as a data attribute.
 
 ```html
-<div data-controller="map" data-map-token="<%= MapKit.jwt %>">
-</div>
+<div data-controller="map" data-map-token="<%= MapKit.token %>"></div>
 ```
 
 Then it's easy to access in the controller connection phase.
