@@ -10,7 +10,7 @@ Setting up Laravel Mix on Heroku is very similar to [how you'd set it up with El
 
 First, set `YARN_PRODUCTION` to `false` using the following command. This tells Heroku to install the `devDependencies` in your `package.json`, but leaves `NODE_ENV` as production.
 
-```sh
+```shell
 $ heroku config:set YARN_PRODUCTION=false
 ```
 
@@ -20,17 +20,17 @@ Also add the `postinstall` key to `scripts` so that Heroku will compile your ass
 
 ```json
 {
-    "engines": {
-        "node": "7.6.0",
-        "yarn": "0.21.3"
-    },
-    "scripts": {
-        //
-        "postinstall": "npm run production"
-    },
-    "devDependencies": {
-        //
-        "laravel-mix": "^0.8.1"
-    }
+  "engines": {
+    "node": "7.6.0",
+    "yarn": "0.21.3"
+  },
+  "scripts": {
+    //
+    "postinstall": "npm run production"
+  },
+  "devDependencies": {
+    //
+    "laravel-mix": "^0.8.1"
+  }
 }
 ```

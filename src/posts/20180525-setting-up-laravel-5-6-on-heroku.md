@@ -42,13 +42,13 @@ Next we'll need to make some configuration tweaks to get up and running. Laravel
 
 To get a fresh app key, ask Laravel for one. You will need to set this as the `APP_KEY` environment variable.
 
-```sh
+```shell
 php artisan key:generate --show
 ```
 
 Next let's configure a few more things using environment variables.
 
-```sh
+```shell
 DB_CONNECTION=pgsql
 LOG_CHANNEL=errorlog
 CACHE_DRIVER=redis
@@ -134,7 +134,7 @@ Note that we leave use the same environment variables so that you can continue t
 
 To instruct Heroku how to host your app you'll need to create a file in the root directory called `Procfile`. This file is used by start the services your application will need.
 
-```sh
+```shell
 web: vendor/bin/heroku-php-apache2 public/
 release: php artisan config:cache && php artisan route:cache && php artisan view:cache && php artisan migrate --force
 ```
