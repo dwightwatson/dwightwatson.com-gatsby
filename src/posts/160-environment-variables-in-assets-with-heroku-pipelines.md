@@ -9,14 +9,14 @@ tags: ["heroku", "ruby on rails", "webpacker"]
 I’ve been using Heroku Pipelines for a bit on a new project which has been great at helping us take code from staging and push it to production. With Rails Webpacker we were putting environment specific variables into the environment so that the assets would be built correctly.
 
 ```js
-export const STRIPE_PUBLISHABLE_KEY = process.env.STRIPE_PUBLISHABLE_KEY;
+export const STRIPE_PUBLISHABLE_KEY = process.env.STRIPE_PUBLISHABLE_KEY
 ```
 
 However, this doesn’t work the way you would expect when using Heroku Pipelines. When you promote an app from staging to production it actually copies the entire application verbatim. That means any assets you built in staging - with staging credentials - then get deployed into production. Not good.
 
 The Heroku documentation does suggest that you rebuild the assets during the release phase, but while this code does run it doesn’t actually affect the end result - your staging assets are still being served in production.
 
-```sh
+```shell
 release: bundle exec rails db:migrate webpacker:clobber webpacker:precomile
 ```
 

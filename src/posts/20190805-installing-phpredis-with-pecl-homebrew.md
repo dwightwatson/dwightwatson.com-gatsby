@@ -8,7 +8,7 @@ tags: ["php", "pecl", "redis"]
 
 I ran into trouble installing the PHP Redis extension installed on my Mac. Homebrew no longer installs PHP extensions and instead suggests you use PECL. However, it does not appear to work straight out of the box.
 
-```sh
+```shell
 pecl install redis
 ```
 
@@ -22,12 +22,11 @@ Warning: mkdir(): File exists in ↵
 ERROR: failed to mkdir /usr/local/Cellar/php/7.3.7/pecl/2010730
 ```
 
-I came across a couple of [GitHub issues](https://github.com/phpredis/phpredis/issues/1341), and [this blog post](
-https://javorszky.co.uk/2018/05/03/getting-xdebug-working-on-php-7-2-and-homebrew/) that described the issue occurring with other extensions.
+I came across a couple of [GitHub issues](https://github.com/phpredis/phpredis/issues/1341), and [this blog post](https://javorszky.co.uk/2018/05/03/getting-xdebug-working-on-php-7-2-and-homebrew/) that described the issue occurring with other extensions.
 
 First, remove the `pecl` symlink that exists in your Homebrew PHP installation.
 
-```sh
+```shell
 rm /usr/local/Cellar/php/7.3.7/pecl
 ```
 

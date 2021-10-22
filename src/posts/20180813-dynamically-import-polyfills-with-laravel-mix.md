@@ -14,7 +14,7 @@ We decided to use new native inputs where possible because it would help provide
 
 Out of the box Laravel Mix does not support dynamic imports but that is easy to change. First run `yarn add babel-plugin-syntax-dynamic-import --dev` to add the babel plugin. Next, add the plugin to your `.babelrc` file.
 
-```sh
+```shell
 {
     "plugins": ["syntax-dynamic-import"]
 }
@@ -25,15 +25,15 @@ You can now use `import` in your code to dynamically import other modules - they
 ```javascript
 const app = new Vue({
   components: {
-    TimeAgo: () => import('./TimeAgo.vue')
-  }
-}).$mount('#app');
+    TimeAgo: () => import("./TimeAgo.vue"),
+  },
+}).$mount("#app")
 ```
 
 You may notice that Laravel Mix (and Webpack, under the hood) will automatically give this dynamic module a name like `0.js`. The name is not important but if you want something more obvious you can use a magic comment to achieve that.
 
 ```javascript
-import(/* webpackChunkName: 'js/timeago' */ './TimeAgo.vue');
+import(/* webpackChunkName: 'js/timeago' */ "./TimeAgo.vue")
 ```
 
 Now the file will have the given name and be placed in your `public/js` directory along with your other assets.
@@ -46,10 +46,10 @@ First we need a way to determine if the browser supports the element we are work
 
 ```javascript
 const supportsInput = (type) => {
-  const input = document.createElement('input');
-  input.type = type;
-  return input.type === type;
-};
+  const input = document.createElement("input")
+  input.type = type
+  return input.type === type
+}
 ```
 
 ## Only import when required
@@ -75,15 +75,15 @@ async mounted() {
 Pikaday also requires some CSS in order to make it look like a date picker. Like everything else this is really simple to import with Webpacker.
 
 ```javascript
-import 'pikaday/css/pikaday.css';
+import "pikaday/css/pikaday.css"
 ```
 
 However much like the Pikaday script we only want to load this when it's required. One way to achieve this is to create our own module for Pikaday and load that in together. We could add a file at `resources/js/modules/pikaday.js` like this - a single file to load the CSS and re-export the Pikaday module.
 
 ```javascript
-import 'pikaday/css/pikaday.css';
+import "pikaday/css/pikaday.css"
 
-export { default as Pikaday } from 'pikaday';
+export { default as Pikaday } from "pikaday"
 ```
 
 Now this self-contained Pikaday can be dynamically imported as a whole only when required. A slight tweak to the import to pop off the Pikaday key will do the trick.

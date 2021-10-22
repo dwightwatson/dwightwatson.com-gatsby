@@ -16,7 +16,7 @@ To switch to Nginx we'll need to do two things; first update the `Procfile` to t
 
 In your `Procfile` update the `web:` line to use `heroku-php-nginx` instead of Apache. As usual you'll provide `public/` as the public directory but we also provide a custom configuration file - `nginx.conf` - which will instruct Nginx how to work with Laravel.
 
-```sh
+```shell
 web: vendor/bin/heroku-php-nginx -C nginx.conf public/
 ```
 

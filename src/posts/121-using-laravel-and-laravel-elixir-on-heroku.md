@@ -10,19 +10,19 @@ I've just started playing with Heroku for some of my Laravel projects as they su
 
 Heroku recommend changing your logger in `config/app.php` to `errorlog` so that the app errors are made available through the command line tools. Instead of changing the file you can just set the `APP_LOG` environment variable and it will work the same.
 
-```sh
+```shell
 heroku config:set APP_LOG=errorlog
 ```
 
 To get your assets running you'll need to make a couple of changes to get Node installed and gulp run after it's all good to go. First off, add the `heroku/nodejs` buildpack (in addition to the `heroku/php` buildpack you have already).
 
-```sh
+```shell
 heroku buildpacks:add heroku/nodejs
 ```
 
 This means your Node dependencies (in your `package.json` file) will now be installed on deployment - with one caveat. It won't install any of your `devDependencies` which is where Laravel puts it's front-end dependencies (and it's likey you have too). You can either make all your dependencies just `dependencies` and Heroku will install them, otherwise you can set another environment variable to tell Heroku to install all the dependencies - including development dependencies.
 
-```sh
+```shell
 heroku config:set NPM_CONFIG_PRODUCTION=false
 ```
 
