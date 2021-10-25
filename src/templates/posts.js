@@ -29,7 +29,7 @@ class Index extends React.Component {
           <li className="mb-5">
             {currentPage > 1 && (
               <Link
-                to={`/pages/${currentPage - 1}`}
+                to={currentPage === 2 ? `/` : `/pages/${currentPage - 1}`}
                 rel="prev"
                 className="underline"
               >
@@ -57,7 +57,7 @@ class Index extends React.Component {
 export default Index
 
 export const pageQuery = graphql`
-  query($skip: Int!, $limit: Int!) {
+  query ($skip: Int!, $limit: Int!) {
     site {
       siteMetadata {
         title
