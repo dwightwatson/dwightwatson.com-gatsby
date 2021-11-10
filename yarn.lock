@@ -5345,10 +5345,10 @@ gatsby-plugin-manifest@^4.1.1:
     semver "^7.3.5"
     sharp "^0.29.1"
 
-gatsby-plugin-offline@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-5.1.0.tgz#bccd6224dcd71443dee277b79dcec15d696d92e9"
-  integrity sha512-e4AOkEKAgqUb1hcz7w4x4aOrnTtgDOKaFltusDLjr2Bd5pABlBFbcn2+bW+DjO3WosDN5gLE5iiGqgq8fr7RRg==
+gatsby-plugin-offline@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-5.1.1.tgz#0b3d9b5df7b3dd0e969c9ee4236f8e73a4329d92"
+  integrity sha512-QNJEhur4z564kV1+Df4LKLP+pz7SpJ4IQ8PR1OUiNG637xPr8AG8fWoYBxFhSRgVkV/D59gM7fQp4gqobGRbjg==
   dependencies:
     "@babel/runtime" "^7.15.4"
     cheerio "^1.0.0-rc.10"
@@ -5427,7 +5427,7 @@ gatsby-plugin-typescript@^4.1.0:
     "@babel/runtime" "^7.15.4"
     babel-plugin-remove-graphql-queries "^4.1.0"
 
-gatsby-plugin-utils@^2.1.0, gatsby-plugin-utils@^2.1.1:
+gatsby-plugin-utils@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-2.1.1.tgz#00829e0c26300a9bae8d91556cb7b39d74caeba9"
   integrity sha512-LzLLSg9CWCi4qMqYNYkt8vAoySkNWKfB8QKJKnpU5qzo/3vjZAx9iWHmoNRYLCCHg1bgJn2Kr5cwOMYAEJspyg==
