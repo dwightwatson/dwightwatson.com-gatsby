@@ -2603,13 +2603,13 @@ babel-plugin-polyfill-regenerator@^0.3.0:
   dependencies:
     "@babel/helper-define-polyfill-provider" "^0.3.0"
 
-babel-plugin-remove-graphql-queries@^4.5.1:
-  version "4.5.1"
-  resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-4.5.1.tgz#e6ffbc4d418c87fc0cc1e6f129de128c23096cb4"
-  integrity sha512-/sjf253nMUTIpfZhGAwKJ2nl3/yjzWFkACPSRr99mp5fyzVGOUC3BL1rPJV1LEqGpWUeDA4iIJME6twNWAUrSA==
+babel-plugin-remove-graphql-queries@^4.5.1, babel-plugin-remove-graphql-queries@^4.5.2:
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-4.5.2.tgz#e233fd63688986a21126c1e1ad9792fc74956b5a"
+  integrity sha512-N/z2vrRBtbPpkzQwgO6vL1GgLvRCxjUwcXPCduMO32xIDlcCeAOAuBUpMSEs7rDyE6YTBhu8FhskeBJl49N0iQ==
   dependencies:
     "@babel/runtime" "^7.15.4"
-    gatsby-core-utils "^3.5.1"
+    gatsby-core-utils "^3.5.2"
 
 babel-plugin-syntax-object-rest-spread@^6.8.0:
   version "6.13.0"
@@ -5073,22 +5073,22 @@ gatsby-plugin-google-analytics@^4.5.0:
     minimatch "3.0.4"
     web-vitals "^1.1.2"
 
-gatsby-plugin-image@^2.5.1:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-2.5.1.tgz#6828d0b827f9efc6202a4b53f6802dfe704ffcce"
-  integrity sha512-ueJ4hWO5j0ERiaqGl4WExivwLCI5Zydo3dYsGB+mgU8cALoOv+dqoj6lIVX/fJKiolJMg/P/7DSwAbeAq74TYw==
+gatsby-plugin-image@^2.5.2:
+  version "2.5.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-2.5.2.tgz#bdd5af8a137a1a425a87b17c3dd908cfccea83e7"
+  integrity sha512-cytI8FNjMoTf/MraMZS9TL0mdDsN7Sh3hYL9GZeLIOTC8n8LE6wK49rDHDrQeq5S6ojk3iEPCgcxWrzQvnbxWQ==
   dependencies:
     "@babel/code-frame" "^7.14.0"
     "@babel/parser" "^7.15.5"
     "@babel/runtime" "^7.15.4"
     "@babel/traverse" "^7.15.4"
     babel-jsx-utils "^1.1.0"
-    babel-plugin-remove-graphql-queries "^4.5.1"
+    babel-plugin-remove-graphql-queries "^4.5.2"
     camelcase "^5.3.1"
     chokidar "^3.5.2"
     common-tags "^1.8.2"
     fs-extra "^10.0.0"
-    gatsby-core-utils "^3.5.1"
+    gatsby-core-utils "^3.5.2"
     objectFitPolyfill "^2.3.5"
     prop-types "^15.7.2"
 
