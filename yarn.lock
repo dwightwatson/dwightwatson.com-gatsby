@@ -2604,7 +2604,7 @@ babel-plugin-polyfill-regenerator@^0.3.0:
   dependencies:
     "@babel/helper-define-polyfill-provider" "^0.3.1"
 
-babel-plugin-remove-graphql-queries@^4.6.0, babel-plugin-remove-graphql-queries@^4.7.0:
+babel-plugin-remove-graphql-queries@^4.7.0:
   version "4.7.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-4.7.0.tgz#d17ee70a4799ea1d5c633c8189b89fa93ce11629"
   integrity sha512-UfDiex308kr8vx5YC3w0KyPitgdPlH3btR/DQWBTMhbavU5zJ+N/nsefzamt8fnq/5911j83Kc89jtmdqzxGDg==
@@ -5072,10 +5072,10 @@ gatsby-page-utils@^2.7.0:
     lodash "^4.17.21"
     micromatch "^4.0.4"
 
-gatsby-plugin-google-analytics@^4.6.0:
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-4.6.0.tgz#0899703cbf59141450d39a6e608d8054e4952b86"
-  integrity sha512-HjWfYDwCKHs3k5RMvrlrTzJmEtyEnT573npiEOezBvy4MSHUhWRb7phNeHGFKcE7+lDwDfUXxrZrb8L8T6GvKw==
+gatsby-plugin-google-analytics@^4.7.0:
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-4.7.0.tgz#c68f187f57748bab220da0ab9f0f78a94793f692"
+  integrity sha512-LQN+Awf7WvodYKytBZFLL40B3PPk7TPHjPa7fDzlq7J9k+/MIXQ1aYAmxhVJN3WK//GdhrltrxPZVwgomaO5NA==
   dependencies:
     "@babel/runtime" "^7.15.4"
     minimatch "3.0.4"
