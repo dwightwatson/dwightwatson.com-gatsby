@@ -7,7 +7,7 @@
   "dependencies": {
     "@tailwindcss/typography": "^0.5.2",
     "autoprefixer": "^10.4.3",
-    "gatsby": "^4.9.3",
+    "gatsby": "^4.10.0",
     "gatsby-plugin-google-analytics": "^4.9.0",
     "gatsby-plugin-image": "^2.10.0",
     "gatsby-plugin-manifest": "^4.10.0",
