@@ -5571,7 +5571,7 @@ gatsby-cli@^4.12.1:
     yoga-layout-prebuilt "^1.10.0"
     yurnalist "^2.1.0"
 
-gatsby-core-utils@^3.11.1, gatsby-core-utils@^3.12.1, gatsby-core-utils@^3.8.2:
+gatsby-core-utils@^3.12.1, gatsby-core-utils@^3.8.2:
   version "3.12.1"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.12.1.tgz#590ec08de7168b086b7d49128732b9ada95b985f"
   integrity sha512-jBG1MfR6t2MZNIl8LQ3Cwc92F6uFNcEC091IK+qKVy9FNT0+WzcKQ6Olip6u1NSvCatfrg1FqrH0K78a6lmnLQ==
@@ -9454,10 +9454,10 @@ pretty-error@^2.1.2:
     lodash "^4.17.20"
     renderkid "^2.0.4"
 
-prismjs@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.27.0.tgz#bb6ee3138a0b438a3653dd4d6ce0cc6510a45057"
-  integrity sha512-t13BGPUlFDR7wRB5kQDG4jjl7XeuH6jbJGt11JHPL96qwsEHNX2+68tFXqc1/k+/jALsbSWJKUOT/hcYAZ5LkA==
+prismjs@^1.28.0:
+  version "1.28.0"
+  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.28.0.tgz#0d8f561fa0f7cf6ebca901747828b149147044b6"
+  integrity sha512-8aaXdYvl1F7iC7Xm1spqSaY/OJBpYW3v+KJ+F17iYxvdc8sfjW194COK5wVhMZX45tGteiBQgdvD/nhxcRwylw==
 
 probe-image-size@^7.2.3:
   version "7.2.3"
