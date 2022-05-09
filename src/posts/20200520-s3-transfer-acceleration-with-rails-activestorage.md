@@ -10,7 +10,7 @@ I've known about [Amazon S3 Transfer Acceleration](https://docs.aws.amazon.com/A
 
 Rails ActiveStorage supports direct file uploads to S3 - which means your users browser will upload directly to S3 and then confirm the asset with your Rails app. This makes Rails apps a perfect use-case for Transfer Acceleration. In addition, it's also a cinch to configure. After you're enabled Transfer Acceleration on your bucket, just add the `use_accelerate_endpoint` configuration.
 
-```yml
+```yaml
 amazon:
   service: S3
   access_key_id: <%= Rails.application.secrets.dig(:aws, :access_key_id) %>

@@ -10,7 +10,7 @@ Recently we migrated a website to use Apple's MapKit JS service - one that is cu
 
 First, make your key ID and team ID available as application secrets in `config/secrets.yml`. For whatever reason I couldn't get the private key to load through here properly so I loaded it separately as you'll see later. Might be worth experimenting on your end to see if you get different results.
 
-```yml
+```yaml
 shared:
   mapkit:
     key_id: <%= ENV['MAPKIT_KEY_ID'] %>

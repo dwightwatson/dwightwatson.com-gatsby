@@ -10,7 +10,7 @@ GitHub recently announced a new release of [GitHub Actions](https://github.com/f
 
 Once you have access to the beta (you'll get an email, and the "Actions" tab will appear on your repo) you can start adding workflows. Here's my boilerplate for building my Laravel app - including building front-end assets - which I've placed in `.github/workflows/ci.yml`.
 
-```yml
+```yaml
 name: CI
 
 on: [push]
@@ -52,7 +52,7 @@ In addition you might need to inject environment variables into your build proce
 
 Then you can adjust your install script to be aware the specific secrets you need and use them appropriately.
 
-```yml
+```yaml
 - name: Install composer dependencies
   env:
     COMPOSER_AUTH: ${{ secrets.COMPOSER_AUTH }}
