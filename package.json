@@ -18,7 +18,7 @@
     "gatsby-remark-prismjs": "^6.13.0",
     "gatsby-source-filesystem": "^4.13.0",
     "gatsby-transformer-remark": "^5.14.0",
-    "gatsby-transformer-sharp": "^4.13.0",
+    "gatsby-transformer-sharp": "^4.14.0",
     "postcss": "^8.4.13",
     "prismjs": "^1.28.0",
     "react": "^18.1.0",
