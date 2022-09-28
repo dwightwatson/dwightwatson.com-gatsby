@@ -2799,14 +2799,14 @@ babel-plugin-polyfill-regenerator@^0.4.0:
   dependencies:
     "@babel/helper-define-polyfill-provider" "^0.3.3"
 
-babel-plugin-remove-graphql-queries@^4.23.0:
-  version "4.23.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-4.23.0.tgz#e6cc553b07c526a7f43e18efb0b7533f5fcee1f7"
-  integrity sha512-YuSPtuhWLdoJVUwQfbbRbmSpOTZBZxWbbbRIEOBTI8fvkYl0RmbanGPv5E+WLgWLhqyreVjPc+MgqheJRZcD9Q==
+babel-plugin-remove-graphql-queries@^4.23.0, babel-plugin-remove-graphql-queries@^4.24.0:
+  version "4.24.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-4.24.0.tgz#1db00d6e657620debcfb5df553397a4e8ba68f14"
+  integrity sha512-B/0Y/JfG+9O9vxZDtievpRymGIWrYtNQ+f0ZVmMcfk8/yclaKvEvefo/DGUXWF7yAH5V8HeEnXeGtQKtfCwE1Q==
   dependencies:
     "@babel/runtime" "^7.15.4"
     "@babel/types" "^7.15.4"
-    gatsby-core-utils "^3.23.0"
+    gatsby-core-utils "^3.24.0"
 
 babel-plugin-syntax-object-rest-spread@^6.8.0:
   version "6.13.0"
@@ -5136,10 +5136,10 @@ gatsby-cli@^4.23.1:
     yoga-layout-prebuilt "^1.10.0"
     yurnalist "^2.1.0"
 
-gatsby-core-utils@^3.23.0:
-  version "3.23.0"
-  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.23.0.tgz#0c8879ffb655f2d8cfe485f03beed7db6441dc69"
-  integrity sha512-ABVTAkjZh+2H4u6GZ+r1uZrdcWuT5KG2nEpKmBWBp21GWEE+yvUqtGOocBgUeGac1A3ggvn02UzcE6BIEm9PYg==
+gatsby-core-utils@^3.23.0, gatsby-core-utils@^3.24.0:
+  version "3.24.0"
+  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.24.0.tgz#0e757bac28ad953a929046138403b3663b733cf7"
+  integrity sha512-P4tbcYOJ1DSYKRP4gIAR9Xta/d/AzjmsK2C6PzX7sNcGnviDKtAIoeV9sE0kNXOqBfUCez25zmAi2cq8NlaxKw==
   dependencies:
     "@babel/runtime" "^7.15.4"
     ci-info "2.0.0"
@@ -5227,23 +5227,23 @@ gatsby-plugin-google-analytics@^4.22.0:
     minimatch "3.0.4"
     web-vitals "^1.1.2"
 
-gatsby-plugin-image@^2.23.1:
-  version "2.23.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-2.23.1.tgz#0383a5232628d2ed97a3651885286594394babf2"
-  integrity sha512-1Lwn3PueX76lkRvMq/ZLhbne+PLUomn48+GBNX4acY8jEOOQnPK/yZDO68c9WmYbejI6sfxFc5kM0cCHkXFRPg==
+gatsby-plugin-image@^2.24.0:
+  version "2.24.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-2.24.0.tgz#965b6c82359f3f51bd8dbf976648f6a81a2c3d03"
+  integrity sha512-btsUxoVX/tQM09LD36XM9kYNbzZzkfBb3qCiaA+w1dEoArKraUYtmcmoMXW4rep7z8Uo7CmutSRD2GHNF0abFg==
   dependencies:
     "@babel/code-frame" "^7.14.0"
     "@babel/parser" "^7.15.5"
     "@babel/runtime" "^7.15.4"
     "@babel/traverse" "^7.15.4"
     babel-jsx-utils "^1.1.0"
-    babel-plugin-remove-graphql-queries "^4.23.0"
+    babel-plugin-remove-graphql-queries "^4.24.0"
     camelcase "^5.3.1"
     chokidar "^3.5.3"
     common-tags "^1.8.2"
     fs-extra "^10.1.0"
-    gatsby-core-utils "^3.23.0"
-    gatsby-plugin-utils "^3.17.1"
+    gatsby-core-utils "^3.24.0"
+    gatsby-plugin-utils "^3.18.0"
     objectFitPolyfill "^2.3.5"
     prop-types "^15.8.1"
 
@@ -5304,10 +5304,10 @@ gatsby-plugin-react-helmet@^5.23.0:
   dependencies:
     "@babel/runtime" "^7.15.4"
 
-gatsby-plugin-sharp@^4.23.1:
-  version "4.23.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-4.23.1.tgz#b888bb25b01f891b62611eace2ae48c632360d6e"
-  integrity sha512-ET6dJQl1EfZPIwwjDItqw09lhQaPx2RZOFjAQc2JC0r73n8O9H8x39NS1t1FI99MTb1VMU9iGKdQQNbi1idjhw==
+gatsby-plugin-sharp@^4.24.0:
+  version "4.24.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-4.24.0.tgz#30fa66295105096b476371dfb36062c1dc7456db"
+  integrity sha512-wVs8F9zLeiLf02yLi8vjse1vqSrZsx2u3RsMhoSv1bEinyaI5bcoLZ7mMJCsEeZe2G9mvNrPi4Ymhh/YzgxYCg==
   dependencies:
     "@babel/runtime" "^7.15.4"
     "@gatsbyjs/potrace" "^2.3.0"
@@ -5316,8 +5316,8 @@ gatsby-plugin-sharp@^4.23.1:
     debug "^4.3.4"
     filenamify "^4.3.0"
     fs-extra "^10.1.0"
-    gatsby-core-utils "^3.23.0"
-    gatsby-plugin-utils "^3.17.1"
+    gatsby-core-utils "^3.24.0"
+    gatsby-plugin-utils "^3.18.0"
     lodash "^4.17.21"
     mini-svg-data-uri "^1.4.4"
     probe-image-size "^7.2.3"
@@ -5338,17 +5338,17 @@ gatsby-plugin-typescript@^4.23.0:
     "@babel/runtime" "^7.15.4"
     babel-plugin-remove-graphql-queries "^4.23.0"
 
-gatsby-plugin-utils@^3.17.1:
-  version "3.17.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-3.17.1.tgz#e662a0536aa9324ae9f1c51345feaf2f5e728a26"
-  integrity sha512-88mR4ee4Cd41bIhGpWGLu4WrZqNw1uIxeY7AqGy6E+dXKtrhMvO0nufg8XqgthICfymhtme5jqgcVw/USMROwg==
+gatsby-plugin-utils@^3.17.1, gatsby-plugin-utils@^3.18.0:
+  version "3.18.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-3.18.0.tgz#898e9416e3d4fa25195e9ca50d17a5435dfe91a3"
+  integrity sha512-3c2iHYV93+zV8AfUhpWSuU0Bd5sgNDaUMkBYNuJAWrUqUfJY4i+QAD/H4Hvie8dhdGrX6QRWEyKo1k5gV+jERQ==
   dependencies:
     "@babel/runtime" "^7.15.4"
     "@gatsbyjs/potrace" "^2.3.0"
     fastq "^1.13.0"
     fs-extra "^10.1.0"
-    gatsby-core-utils "^3.23.0"
-    gatsby-sharp "^0.17.0"
+    gatsby-core-utils "^3.24.0"
+    gatsby-sharp "^0.18.0"
     graphql-compose "^9.0.7"
     import-from "^4.0.0"
     joi "^17.4.2"
@@ -5382,6 +5382,14 @@ gatsby-sharp@^0.17.0:
   version "0.17.0"
   resolved "https://registry.yarnpkg.com/gatsby-sharp/-/gatsby-sharp-0.17.0.tgz#cc48e51d396cc4049f902ba60de6e78075241a3a"
   integrity sha512-k1iGqqox19nD70cEPwVI8grAgbtXswZtuonlROAV02J7kpUP6ayfdvx7as6Phdr5jam+ZQ1vfsOu60yZZgr/LQ==
+  dependencies:
+    "@types/sharp" "^0.30.5"
+    sharp "^0.30.7"
+
+gatsby-sharp@^0.18.0:
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/gatsby-sharp/-/gatsby-sharp-0.18.0.tgz#bee4bbae079917afec20d005c9aee75ce7fd0755"
+  integrity sha512-tnGWupSZc4y3UgcAR2ENma9WGBYkCdPFy5XrTgAmqjfxw6JDcJz+H3ikHz9SuUgQyMnlv2QdossHwdUBcVeVGw==
   dependencies:
     "@types/sharp" "^0.30.5"
     sharp "^0.30.7"
@@ -5420,13 +5428,13 @@ gatsby-telemetry@^3.23.0:
     lodash "^4.17.21"
     node-fetch "^2.6.7"
 
-gatsby-transformer-remark@^5.23.1:
-  version "5.23.1"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-5.23.1.tgz#ed2301476313cb7a66c97b2c1d51d9455cdd94a4"
-  integrity sha512-AgFeOmQYZ7mJsP6Mn3JQCCj5tMw/OifJmV+/0u8e27BInAvCai0RCMYHLn+FF44bOiglIVVN6UUDfV71qX/IHQ==
+gatsby-transformer-remark@^5.24.0:
+  version "5.24.0"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-5.24.0.tgz#1736c83291c8be402dced2b823322acef8f7b896"
+  integrity sha512-xI24Cx1M8yD7zGeBXtmgX8rtm8t3t4RTKkgJAmuAjj6vf/Mi0SIRZUcr27Cqx0ctHUwZQZV5uIbIWfCDml1Y7w==
   dependencies:
     "@babel/runtime" "^7.15.4"
-    gatsby-core-utils "^3.23.0"
+    gatsby-core-utils "^3.24.0"
     gray-matter "^4.0.3"
     hast-util-raw "^6.0.2"
     hast-util-to-html "^7.1.3"
