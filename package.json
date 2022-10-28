@@ -6,7 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@tailwindcss/typography": "^0.5.7",
-    "autoprefixer": "^10.4.12",
+    "autoprefixer": "^10.4.13",
     "gatsby": "^4.24.5",
     "gatsby-plugin-google-analytics": "^4.22.0",
     "gatsby-plugin-image": "^2.24.0",
